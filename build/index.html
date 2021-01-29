@@ -4,38 +4,50 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <link rel="preload" href="fonts/PTMono-Regular.woff2" as="font" type="font/woff2>
-  <link rel=" preload"="" css="" style.min.css"="">
+  <link rel="preload" href="fonts/PTMono-Regular.woff2" as="font" type="font/woff2">
+  <link rel="preload" href="fonts/Roboto-Medium.woff2" as="font" type="font/woff2">
+  <link rel="preload" href="fonts/RobotoCondensed-Bold.woff2" as="font" type="font/woff2">
+  <link rel="preload" href="fonts/RobotoCondensed-Regular.woff2" as="font" type="font/woff2">
+  <link href="css/style.min.css" rel="stylesheet">
   <title>Печатные платы и комплектующие</title>
-  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/style.min.css">
 </head>
 <body class="page-body">
+
   <header class="page-header">
     <div class="page-header__wrapper">
       <a href="" class="page-header__logo logo">
-        <img src="./img/logo.svg" width="52" height="52" alt="Логотип Smart Device - магазин печатных плат">
+        <img class="logo__img" src="./img/logo.svg" width="52" height="52" alt="Логотип Smart Device - магазин печатных плат">
         <div class="logo__text">
           <div class="logo__text-name">Smart Device</div>
           <div class="logo__text-description">умные технологии</div>
         </div>
       </a>
+      <nav class="page-header__nav">
+        <div class="page-header__mail mail">
+          <a href="mailto:info@sd.ru">
+            <svg class="mail__icon" width="19" height="14">
+              <use xlink:href="#letter"></use>
+            </svg>
+            info@sd.ru</a>
+        </div>
+        <div class="page-header__call call">
+          <a href="tel:+74950005252">
+            <svg class="call__icon" width="18" height="18">
+              <use xlink:href="#phone"></use>
+            </svg>
+            +7 (495) 000 52 52</a>
+        </div>
+        <a href="#" class="page-header__callback button">
+          Заказать звонок
+        </a>
+      </nav>
     </div>
-    <nav class="page-header__nav">
-      <div class="page-header__mail">
-        <a href="mailto:info@sd.ru">info@sd.ru</a>
-      </div>
-      <div class="page-header__call">
-        <a href="tel:+74950005252">+7 (495) 000 52 52</a>
-      </div>
-      <a href="#" class="page-header__callback button">
-        Заказать звонок
-      </a>
-    </nav>
   </header>
   <main class="page-main">
-    <div class="page-main__wrap">
+    <div class="page-main__wrapper">
       <div class="page-main__main">
-        <div>Печатные платы</div>
+        <div class="page-main__text">Печатные платы</div>
         <h1 class="page-main__title">производство и монтаж, поставка комплектующих, блоков и модулей</h1>
         <a class="page-main__consult">Получить бесплатную консультацию</a>
         <a class="page-main__scroll-down">Скролл вниз</a>

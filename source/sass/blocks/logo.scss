@@ -1,0 +1,36 @@
+.page-header__logo {
+    display: flex;
+    flex-grow: 1;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.logo__img {
+    margin-right: 16px;
+}
+
+.logo__text {
+    margin-top: 8px;
+}
+
+.logo__text-name {
+    color: $white;
+    font-family: $font-secondary;
+    font-size: 25px;
+    font-weight: 700;
+
+    @media (max-width: $mobile-min-width) {
+        display: none;
+    }
+}
+
+.logo__text-description {
+    color: $logo-gray;
+    font-family: $font-logo;
+    font-size: 12px;
+    font-weight: 500;
+
+    @media (max-width: $mobile-min-width) {
+        display: none;
+    }
+}

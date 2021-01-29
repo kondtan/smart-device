@@ -1,0 +1,113 @@
+.page-header {
+    background-color: $main-dark-bg;
+    display: flex;
+}
+
+.page-header__wrapper {
+    width: 1512px;
+    margin: 33px auto 0;
+    padding: 0 50px;
+
+    display: flex;
+    justify-items: space-between;
+
+    color: $white;
+
+    @media (max-width: $tablet-width) {
+        margin-top: 20px;
+        padding: 0 23px 20px 25px;
+      }
+    
+    @media (max-width: $mobile-min-width) {
+        padding: 0 17px 0 17px;
+        margin-top: 17px;
+      }
+}
+
+.page-header__nav {
+    display: flex;
+    align-items: center;
+    margin-right: 2px;
+
+    @media (max-width: $tablet-width) {
+        width: 85px;
+      }
+    
+    @media (max-width: $mobile-min-width) {
+        height: 20px;
+      }
+}
+
+.page-header__mail {
+    position: relative;
+
+    &::before {
+        position: absolute;
+        content: "";
+        background-image: url("../img/envelope.svg");
+        background-repeat: no-repeat;
+        background-size: contain;
+        width: 19px;
+        height: 14px;
+        left: 0;
+        top: 4px;
+    }
+
+    @media (max-width: $tablet-width) {
+        &::before {
+            width: 25px;
+            height: 19px;
+        }
+    }
+}
+
+.page-header__call {
+    position: relative;
+
+    &::before {
+        position: absolute;
+        content: "";
+        background-image: url("../img/phone_call.svg");
+        background-repeat: no-repeat;
+        background-size: contain;
+        width: 18px;
+        height: 18px;
+        left: 0;
+        top: 2px;
+    }
+
+    @media (max-width: $tablet-width) {
+        &::before {
+            width: 24px;
+            height: 24px;
+        }
+    }
+}
+
+.page-header__mail a, 
+.page-header__call a {
+    font-family: $font-main;
+    font-size: 16px;
+    font-weight: 400;
+
+    text-decoration: none;
+    color: $white;
+
+    @media (max-width: $tablet-width) {
+        display: none;;
+      }
+
+}
+
+.page-header__call {
+    margin-left: 60px;
+}
+
+.page-header__callback {
+    max-width: 185px;
+    margin-left: 50px;
+
+    @media (max-width: $tablet-width) {
+        display: none;
+      }
+}
