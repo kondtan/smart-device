@@ -1,2 +1,4 @@
-h1{color:red}
+@font-face{body {
+    font-family: "PTMono-Regular";
+    src: url("/source/fonts/PTMono-Regular.ttf"); }}
 /*# sourceMappingURL=style.min.css.map */
