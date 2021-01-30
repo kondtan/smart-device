@@ -1,9 +1,217 @@
+.page-main {
+    scroll-behavior: smooth;
+    min-height: 800px;
+}
+
 .page-main__wrapper {
     margin: -90px 0 0;
     background-color: $main-dark-bg;
-    background-image: url("../img/bg-pattern.png");
+    background-image: url(../img/bg-pattern.png);
+}
+
+.page-main__main {
+    max-width: 1623px;
+    height: 800px;
+    margin: 0 auto;
+    padding: 0 0 0 100px;
+
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+
+    &::before {
+        position: absolute;
+        content: "";
+        width: 600px;
+        height: 500px;
+        background-image: url(../img/bg-polygons.svg);
+        background-size: contain;
+        background-repeat: no-repeat;
+        top: 140px;
+        right: 50px;
+        transform: scale(1.5);   
+    }
+
+    @media (max-width: $tablet-width) {
+        &::before {
+            width: 400px;
+            height: 400px;
+            top: 50px;
+            right: 50px;
+        }
+    }
+
+    @media (max-width: $mobile-width) {
+        padding: 20px;
+
+        &::before {
+            width: 473px;
+            height: 300px;
+            top: 100px;
+            right: -200px;
+        }
+    }
+
+    @media (max-width: $mobile-min-width) {
+        &::before {
+            width: 420px;
+            height: 215px;
+            top: 100px;
+            right: -341px;
+        }
+    }
 }
 
 .page-main__text {
     padding-top: 200px;
+    margin-bottom: 20px;
+    z-index: 5;
+
+    font-family: $font-secondary;
+    font-size: 80px;
+    font-weight: 700;
+    text-transform: uppercase;
+    line-height: 94px;
+    color: $white;
+
+    @media (max-width: $tablet-width) {
+        width: 470px;
+        font-size: 60px;
+        line-height: 70px;
+    }
+
+    @media (max-width: $mobile-min-width) {
+        width: auto;
+        padding-top: 300px;
+        line-height: 47px;
+        font-size: 40px;
+    }
+}
+
+.page-main__title {
+    margin: 0;
+    max-width: 683px;
+    margin: 0 0 44px;
+    padding-left: 98px;
+    position: relative;
+    z-index: 5;
+    
+    font-family: $font-main;
+    font-weight: 400;
+    font-size: 22px;
+    line-height: 38px;
+    color: $white;
+
+    &::before {
+        position: absolute;
+        content: "";
+        width: 66px;
+        height: 2px;
+        background-color: #fff;
+        left: 2px;
+        top: 16px;
+    }
+
+    @media (max-width: $tablet-width) {
+        padding-left: 48px;
+        width: 356px;
+        font-size: 18px;
+        line-height: 28px;
+
+        &::before {
+            width: 33px;
+        }
+    }
+
+    @media (max-width: $mobile-min-width) {
+        width: 245px;
+        font-size: 16px;
+    }
+}
+
+.page-main__consult {
+    width: 407px;
+    min-height: 52px;
+    margin: 0 0 131px 98px;
+    padding: 16px 45px 19px 44px;
+    position: relative;
+    box-sizing: border-box;
+    z-index: 5;
+
+    font-family: $font-secondary;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 19px;
+    letter-spacing: .05em;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: $white;
+    background-color: $main-blue;
+    border-radius: 5px;
+
+    &:hover {
+        color: $main-blue;
+        background-color: $white;
+    }
+
+    &::before {
+        position: absolute;
+        width: auto;
+        height: 24px;
+        content: "Получить бесплатную консультацию";
+    }
+
+    @media (max-width: $tablet-width) {
+        margin-left: 50px;
+    }
+
+    @media (max-width: $mobile-width) {
+        width: 287px;
+        margin: 0 auto;
+
+        &::before {
+            left: 33px;
+            content: "Бесплатная консультация";
+        }
+    }
+}
+
+.page-main__scroll-down {
+    margin: 0 0 127px -35px;
+    color: $white;
+    opacity: 0.5;
+    transform: rotate(-90deg);
+    cursor: pointer;
+
+    @media (max-width: $tablet-width) {
+        display: none;
+    }
+}
+
+.page-main__product-img {
+    position: absolute;
+    width: 705px;
+    height: 515px;
+    top: 170px;
+    right: 30px;
+
+    @media (max-width: $tablet-width) {
+        width: 465px;
+        height: 340px;
+        top: 127px;
+        right: 0;
+    }
+
+    @media (max-width: $mobile-width) {
+        width: 465px;
+        height: 340px;
+    }
+
+    @media (max-width: $mobile-min-width) {
+        width: 301px;
+        height: 220px;
+        top: 131px;
+        right: 0;
+    }
 }
