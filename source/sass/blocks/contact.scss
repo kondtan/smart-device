@@ -1,0 +1,35 @@
+.contact {
+    display: flex;
+    flex-direction: column;
+}
+
+.contact__title {
+    margin: 0;
+
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 16px;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: $main-dark-bg;
+}
+
+.contact__block {
+    display: flex;
+    flex-direction: column;
+
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 25px;
+    color: $main-dark-bg;
+    opacity: 0.5;
+}
+
+.contact__phone {
+    color: $main-dark-bg;
+    text-decoration: none;
+}
+
+.contact__button {
+    display: none;
+}

@@ -3,6 +3,10 @@
     display: flex;
 }
 
+.page-header__logo {
+    flex-grow: 1;
+}
+
 .page-header__wrapper {
     width: 1512px;
     margin: 33px auto 0;

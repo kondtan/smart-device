@@ -1,6 +1,5 @@
-.page-header__logo {
+.logo {
     display: flex;
-    flex-grow: 1;
     text-decoration: none;
     cursor: pointer;
 }
@@ -22,6 +21,10 @@
     @media (max-width: $mobile-min-width) {
         display: none;
     }
+}
+
+.logo__text-name--footer {
+    color: $logo-dark;
 }
 
 .logo__text-description {

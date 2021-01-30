@@ -1,0 +1,34 @@
+.sitemap__title {
+    margin: 0;
+
+    font-size: 15px;
+    font-weight: 400;
+    letter-spacing: 0.05em;
+    line-height: 16px;
+    text-transform: uppercase;
+    color: $main-dark-bg;
+}
+
+.sitemap__list {
+    max-height: 110px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    flex-wrap: wrap;
+}
+
+.sitemap__button {
+    display: none;
+}
+
+.sitemap__item a {
+    text-decoration: none;
+    font-size: 15px;
+    line-height: 25px;
+    color: $main-dark-bg;
+    opacity: 0.5;
+}
