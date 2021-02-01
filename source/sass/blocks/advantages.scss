@@ -1,0 +1,123 @@
+.advantages {
+    max-width: 950px;
+    padding: 0 50px;
+    position: relative;
+
+    &::before {
+        width: 268px;
+        height: 268px;
+
+        position: absolute;
+        top: -70px;
+        left: -160px;
+        content: "";
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-image: url(../img/triangle.svg);
+        transform: rotate(90deg);
+    }
+
+    &::after {
+        width: 877px;
+        height: 877px;
+
+        position: absolute;
+        bottom: -250px;
+        left: 230px;
+        content: "";
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-image: url(../img/dotted_polygon.svg);
+        transform: rotate(180deg);
+      }
+
+    @media (max-width: $tablet-width) {
+        padding: 0 25px;
+    }
+}
+
+.advantages__list {
+    max-width: 1270px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    position: relative;
+
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+
+    &::after {
+        width: 264px;
+        height: 277px;
+
+        position: absolute;
+        top: 330px;
+        right: -400px;
+        content: "";
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-image: url(../img/triangle.svg);
+        transform: rotate(270deg);
+      }
+}
+
+.advantages__item {
+    width: calc(100%/12*6 - 20px);
+    min-height: 299px;
+    padding: 40px 44px;
+    margin: 0 0 30px;
+    box-sizing: border-box;
+    z-index: 10;
+    background-color: $white;
+    cursor: pointer;
+
+    border: 1px solid $border-color;
+    border-left: 3px solid $main-blue;
+
+    &:hover,
+    &:focus {
+        color: $white;
+        background-color: $main-blue;
+        outline: 0;
+    }
+
+    @media (max-width: $mobile-width) {
+        width: 100%;
+        min-height: 232px;
+        margin: 0 0 20px;
+    }
+}
+
+.advantages__icon {
+    fill: $main-blue;
+}
+
+.advantages__item:hover .advantages__icon,
+.advantages__item:focus .advantages__icon {
+    fill: $white;
+}
+
+.advantages__item:hover .advantages__title,
+.advantages__item:focus .advantages__title {
+    color: $white;
+}
+
+.advantages__title {
+    margin: 0;
+
+    font-family: $font-secondary;
+    font-weight: 400;
+    font-size: 24px;
+    color: $main-blue;
+    line-height: 34px;
+}
+
+.advantages__text {
+    margin: 0;
+
+    font-size: 16px;
+    line-height: 22px;
+    color: $font-color;
+}
+

@@ -217,3 +217,15 @@
         right: 0;
     }
 }
+
+.page-main__advantages {
+    margin: 112px auto 76px;
+
+    @media (max-width: $tablet-width) {
+        margin: 53px auto 24px;
+    }
+
+    @media (max-width: $mobile-width) {
+        margin-top: 40px;
+    }
+}
