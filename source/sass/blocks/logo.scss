@@ -17,10 +17,6 @@
     font-family: $font-secondary;
     font-size: 25px;
     font-weight: 700;
-
-    @media (max-width: $mobile-min-width) {
-        display: none;
-    }
 }
 
 .logo__text-name--footer {
@@ -32,8 +28,4 @@
     font-family: $font-logo;
     font-size: 12px;
     font-weight: 500;
-
-    @media (max-width: $mobile-min-width) {
-        display: none;
-    }
 }

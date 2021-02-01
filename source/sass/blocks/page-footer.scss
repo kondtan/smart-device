@@ -9,27 +9,102 @@
     position: relative;
 }
 
-.page-footer__logo {
-    margin-bottom: 52px;
+.page-footer__block {
+    @media (max-width: $tablet-width) {
+        width: 100%;
+        border-bottom: 1px solid $footer-border;
+    }
 }
 
-.page-footer__info {
-    max-width: 1476px;
-    width: 100%;
-    margin: 65px auto 0;
-    margin-bottom: 55px;
+.page-footer__block-wrapper {
+    width: auto;
     padding: 0 30px;
 
     display: flex;
     justify-content: space-between;
+    flex-wrap: wrap;
+
+    @media (max-width: $tablet-width) {
+        margin: 19px 0 25px;
+        margin-bottom: 0;
+        align-items: center;
+    }
+
+    @media (max-width: $mobile-min-width) {
+        justify-content: center;
+    }
+}
+
+.page-footer__logo {
+    margin-bottom: 52px;
+    margin-right: 20px;
+
+    @media (max-width: $tablet-width) {
+        margin-bottom: 27px;
+    }
+}
+
+.page-footer__dates {
+    color: $main-dark-bg;
+    opacity: 0.5;
+    text-transform: uppercase;
+    font-size: 13px;
+    line-height: 24px;
+
+    @media (min-width: $tablet-width) {
+        display: none;
+    }
+
+    @media (max-width: $tablet-width) {
+        margin-right: 40px;
+        margin-bottom: 32px;
+    }
+}
+
+.page-footer__social {
+    margin: 0;
+
+    @media (min-width: $tablet-width) {
+        width: 300px;
+    }
+
+    @media (max-width: $tablet-width) {
+        margin: 0 0 32px;
+    }
+}
+
+.page-footer__info {
+    // max-width: 1476px;
+    width: 100%;
+    margin: 65px auto 0;
+    margin-bottom: 55px;
+
+    display: flex;
+    justify-content: space-between;
+
+    @media (max-width: $tablet-width) {
+        margin: 0;
+        flex-wrap: wrap;
+    }
 }
 
 .page-footer__sitemap {
-    min-width: 450px;
+    @media (max-width: $tablet-width) {
+        margin: 38px 25px 33px;
+    }
+
+    @media (max-width: $mobile-min-width) {
+        margin-top: 29px;
+        margin-left: 0;
+        margin-bottom: 0;
+        
+        padding-left: 25px;
+        padding-bottom: 28px;
+    }
 }
 
 .page-footer__contact {
-    width: 450px;
-    display: flex;
-    flex-direction: column;
+    @media (max-width: $tablet-width) {
+        margin: 38px 37px 33px 25px;
+    }
 }
