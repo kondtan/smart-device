@@ -1,41 +1,41 @@
 .contact {
-    display: flex;
-    flex-direction: column;
-    width: 450px;
+  display: flex;
+  flex-direction: column;
+  width: 450px;
 
-    @media (max-width: $tablet-width) {
-        width: 333px;
-    }
+  @media (max-width: $tablet-width) {
+    width: 333px;
+  }
 }
 
 .contact__title {
-    margin: 0;
-    margin-bottom: 10px;
+  margin: 0;
+  margin-bottom: 10px;
 
-    font-weight: 400;
-    font-size: 15px;
-    line-height: 16px;
-    text-transform: uppercase;
-    letter-spacing: 0.05em;
-    color: $main-dark-bg;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 16px;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: $main-dark-bg;
 }
 
 .contact__block {
-    display: flex;
-    flex-direction: column;
+  display: flex;
+  flex-direction: column;
 
-    font-weight: 400;
-    font-size: 15px;
-    line-height: 25px;
-    color: $main-dark-bg;
-    opacity: 0.5;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 25px;
+  color: $main-dark-bg;
+  opacity: 0.5;
 }
 
 .contact__phone {
-    color: $main-dark-bg;
-    text-decoration: none;
+  color: $main-dark-bg;
+  text-decoration: none;
 }
 
 .contact__button {
-    display: none;
+  display: none;
 }

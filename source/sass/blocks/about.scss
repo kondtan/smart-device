@@ -1,110 +1,110 @@
 .about {
-    max-width: 1270px;
+  max-width: 1270px;
 
-    margin-bottom: 90px;
-    padding: 0 55px 0 230px;
+  margin-bottom: 90px;
+  padding: 0 55px 0 230px;
 
-    position: relative;
+  position: relative;
 
-    color: $font-color;
+  color: $font-color;
+
+  &::before {
+    width: 220px;
+    height: 317px;
+
+    position: absolute;
+    left: 27px;
+    top: 5px;
+
+    content: "";
+    background-image: url("../img/2005.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
+
+  &::after {
+    position: absolute;
+    content: "";
+    width: 877px;
+    height: 877px;
+    left: -626px;
+    top: -402px;
+    background-image: url("../img/dotted_polygon.svg");
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
+
+  @media (max-width: $tablet-width) {
+    margin-bottom: 60px;
+    padding: 0 19px 0 213px;
 
     &::before {
-        width: 220px;
-        height: 317px;
-
-        position: absolute;
-        left: 27px;
-        top: 5px;
-
-        content: "";
-        background-image: url(../img/2005.png);
-        background-repeat: no-repeat;
-        background-size: contain;
-      }
-
-      &::after {
-        position: absolute;
-        content: "";
-        width: 877px;
-        height: 877px;
-        left: -626px;
-        top: -402px;
-        background-image: url(../img/dotted_polygon.svg);
-        background-repeat: no-repeat;
-        background-size: contain;
-      }
-
-      @media (max-width: $tablet-width) {
-        margin-bottom: 60px;
-        padding: 0 19px 0 213px;
-    
-        &::before {
-          width: 251px;
-          height: 361px;
-          left: 1px;
-          top: 1px;
-        }
-    
-        &::after {
-          display: none;
-        }
-      }
-
-      @media (max-width: $mobile-width) {
-        margin-bottom: 45px;
-        padding: 0 15px 0 17px;
-    
-        &::before {
-          display: none;
-        }
+      width: 251px;
+      height: 361px;
+      left: 1px;
+      top: 1px;
     }
+
+    &::after {
+      display: none;
+    }
+  }
+
+  @media (max-width: $mobile-width) {
+    margin-bottom: 45px;
+    padding: 0 15px 0 17px;
+
+    &::before {
+      display: none;
+    }
+  }
 }
 
 .about__title {
-    margin: 0 0 23px;
+  margin: 0 0 23px;
 
-    font-family: $font-secondary;
-    font-weight: 400;
-    font-size: 36px;
-    line-height: 51px;
+  font-family: $font-secondary;
+  font-weight: 400;
+  font-size: 36px;
+  line-height: 51px;
 
-    @media (max-width: $tablet-width) {
-        margin: 0 0 21px 0;
-        font-size: 32px;
-        line-height: 45px;
-      }
+  @media (max-width: $tablet-width) {
+    margin: 0 0 21px 0;
+    font-size: 32px;
+    line-height: 45px;
+  }
 
-    @media (max-width: $mobile-width) {
-        font-size: 28px;
-        margin: 0 0 14px 0;
-    }
+  @media (max-width: $mobile-width) {
+    font-size: 28px;
+    margin: 0 0 14px 0;
+  }
 }
 
 .about__text {
-    margin: 0;
+  margin: 0;
 
-    font-size: 16px;
-    line-height: 21,5;
+  font-size: 16px;
+  line-height: 22;
 }
 
 .about__more {
-    min-width: 180px;
-    margin: 19px 0 20px;
-    padding: 9px 23px 9px 24px;
+  min-width: 180px;
+  margin: 19px 0 20px;
+  padding: 9px 23px 9px 24px;
 
-    display: inline-block;
-    text-align: center;
+  display: inline-block;
+  text-align: center;
 
-    font-family: $font-secondary;
-    font-weight: 700;
-    text-transform: uppercase;
-    text-decoration: none;
-    color: $main-blue;
-    border: 1px solid $main-blue;
-    border-radius: 5px;
+  font-family: $font-secondary;
+  font-weight: 700;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: $main-blue;
+  border: 1px solid $main-blue;
+  border-radius: 5px;
 
-    &:hover {
-        color: $white;
-        background-color: $main-blue;
-    }
+  &:hover {
+    color: $white;
+    background-color: $main-blue;
+  }
 }

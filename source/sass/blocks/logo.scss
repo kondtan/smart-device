@@ -1,31 +1,31 @@
 .logo {
-    display: flex;
-    text-decoration: none;
-    cursor: pointer;
+  display: flex;
+  text-decoration: none;
+  cursor: pointer;
 }
 
 .logo__img {
-    margin-right: 16px;
+  margin-right: 16px;
 }
 
 .logo__text {
-    margin-top: 8px;
+  margin-top: 8px;
 }
 
 .logo__text-name {
-    color: $white;
-    font-family: $font-secondary;
-    font-size: 25px;
-    font-weight: 700;
+  color: $white;
+  font-family: $font-secondary;
+  font-size: 25px;
+  font-weight: 700;
 }
 
 .logo__text-name--footer {
-    color: $logo-dark;
+  color: $logo-dark;
 }
 
 .logo__text-description {
-    color: $logo-gray;
-    font-family: $font-logo;
-    font-size: 12px;
-    font-weight: 500;
+  color: $logo-gray;
+  font-family: $font-logo;
+  font-size: 12px;
+  font-weight: 500;
 }
