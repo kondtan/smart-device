@@ -33,6 +33,10 @@
 
     @media (max-width: $tablet-width) {
         padding: 0 25px;
+
+        &::before {
+            display: none;
+        }
     }
 }
 
@@ -87,6 +91,10 @@
         min-height: 232px;
         margin: 0 0 20px;
     }
+
+    @media (max-width: $mobile-min-width) {
+        padding: 25px;
+    }
 }
 
 .advantages__icon {
@@ -111,6 +119,13 @@
     font-size: 24px;
     color: $main-blue;
     line-height: 34px;
+
+    @media (max-width: $mobile-min-width) {
+        margin-bottom: 16px;
+        
+        font-size: 20px;
+        line-height: 28px;
+    }
 }
 
 .advantages__text {
