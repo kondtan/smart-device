@@ -1,0 +1,30 @@
+.feedback {
+  color: $white;
+  background-color: $main-blue;
+
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 22px;
+}
+
+.feedback__wrapper {
+  width: 1276px;
+
+  margin: 0 auto;
+  padding: 0 50px;
+
+  display: flex;
+  flex-direction: column;
+}
+
+.feedback__title {
+  margin: 0;
+
+  font-family: $font-secondary;
+  font-size: 36px;
+  font-weight: 400;
+  line-height: 51px;
+}
+
+// .feedback__tagline {
+// }
