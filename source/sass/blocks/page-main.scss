@@ -5,8 +5,14 @@
 
 .page-main__wrapper {
   margin: -90px 0 0;
+  padding-bottom: 82px;
+
   background-color: $main-dark-bg;
   background-image: url("../img/bg-pattern.png");
+
+  @media (max-width: $tablet-width) {
+    padding-bottom: 0;
+  }
 }
 
 .page-main__main {

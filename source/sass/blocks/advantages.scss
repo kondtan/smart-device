@@ -1,5 +1,5 @@
 .advantages {
-  max-width: 950px;
+  max-width: 1170px;
   padding: 0 50px;
   position: relative;
 
@@ -9,7 +9,7 @@
 
     position: absolute;
     top: -70px;
-    left: -160px;
+    left: -164px;
     content: "";
     background-repeat: no-repeat;
     background-size: contain;
@@ -38,10 +38,18 @@
       display: none;
     }
   }
+
+  @media (max-width: $mobile-width) {
+    margin-top: 37px;
+  }
+
+  @media (max-width: $mobile-min-width) {
+    padding: 0 16px 0 13px;
+  }
 }
 
 .advantages__list {
-  max-width: 1270px;
+  max-width: 1173px;
   margin: 0;
   padding: 0;
   list-style: none;
@@ -56,8 +64,9 @@
     height: 277px;
 
     position: absolute;
-    top: 330px;
-    right: -400px;
+    top: 340px;
+    right: -390px;
+
     content: "";
     background-size: contain;
     background-repeat: no-repeat;
@@ -67,10 +76,13 @@
 }
 
 .advantages__item {
-  width: calc(100% / 12 * 6 - 20px);
+  width: calc(100% / 12 * 6 - 15px);
   min-height: 299px;
-  padding: 40px 44px;
-  margin: 0 0 30px;
+
+  margin: 0 0 30px 0;
+  padding: 69px 38px 25px 43px;
+
+  position: relative;
   box-sizing: border-box;
   z-index: 10;
   background-color: $white;
@@ -79,11 +91,20 @@
   border: 1px solid $border-color;
   border-left: 3px solid $main-blue;
 
+  &--detective {
+    top: 43px;
+  }
+
   &:hover,
   &:focus {
     color: $white;
     background-color: $main-blue;
     outline: 0;
+  }
+
+  @media (max-width: $tablet-width) {
+    min-height: 233px;
+    padding: 34px 24px 20px;
   }
 
   @media (max-width: $mobile-width) {
@@ -94,11 +115,28 @@
 
   @media (max-width: $mobile-min-width) {
     padding: 25px;
+    padding-top: 39px;
+    padding-bottom: 25px;
+
+    margin-bottom: 22px;
+
+    &:nth-child(2) {
+      padding-right: 12px;
+    }
   }
 }
 
 .advantages__icon {
+  position: absolute;
+  top: 39px;
+  left: 42px;
+
   fill: $main-blue;
+
+  @media (max-width: $tablet-width) {
+    top: 25px;
+    left: 25px;
+  }
 }
 
 .advantages__item:hover .advantages__icon,
@@ -120,8 +158,12 @@
   color: $main-blue;
   line-height: 34px;
 
+  @media (max-width: $tablet-width) {
+    margin: 33px 0 7px;
+  }
+
   @media (max-width: $mobile-min-width) {
-    margin-bottom: 16px;
+    margin-bottom: 5px;
 
     font-size: 20px;
     line-height: 28px;
