@@ -8,7 +8,7 @@
 }
 
 .page-header__wrapper {
-  width: 1512px;
+  width: 1413px;
   margin: 33px auto 0;
   padding: 0 50px;
 
@@ -29,6 +29,8 @@
 }
 
 .page-header__nav {
+  height: 52px;
+
   display: flex;
   align-items: center;
   margin-right: 2px;
@@ -50,7 +52,7 @@
     background-size: contain;
     width: 19px;
     height: 14px;
-    left: 0;
+    left: -10px;
     top: 4px;
   }
 
@@ -58,12 +60,21 @@
     &::before {
       width: 25px;
       height: 19px;
+
+      left: 2px;
+    }
+  }
+
+  @media (max-width: $mobile-min-width) {
+    &::before {
+      left: 16px;
+      top: -2px;
     }
   }
 }
 
 .page-header__call {
-  margin-left: 60px;
+  margin-left: 95px;
   position: relative;
 
   &::before {
@@ -74,7 +85,7 @@
     background-size: contain;
     width: 18px;
     height: 18px;
-    left: 0;
+    left: -7px;
     top: 2px;
   }
 
@@ -82,6 +93,15 @@
     &::before {
       width: 24px;
       height: 24px;
+
+      left: -34px;
+    }
+  }
+
+  @media (max-width: $mobile-min-width) {
+    &::before {
+      left: -30px;
+      top: -5px;
     }
   }
 }
@@ -102,7 +122,7 @@
 
 .page-header__callback {
   max-width: 185px;
-  margin-left: 50px;
+  margin-left: 49px;
 
   @media (max-width: $tablet-width) {
     display: none;

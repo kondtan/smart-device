@@ -6,10 +6,19 @@
 
 .logo__img {
   margin-right: 16px;
+
+  @media (max-width: $mobile-min-width) {
+    width: 38px;
+    height: 38px;
+  }
 }
 
 .logo__text {
-  margin-top: 8px;
+  margin-top: 9px;
+
+  @media (max-width: $mobile-min-width) {
+    display: none;
+  }
 }
 
 .logo__text-name {
