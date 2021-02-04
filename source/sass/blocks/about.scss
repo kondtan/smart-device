@@ -3,6 +3,7 @@
 
   margin-bottom: 90px;
   padding: 0 55px 0 230px;
+  box-sizing: border-box;
 
   position: relative;
 
@@ -13,8 +14,8 @@
     height: 317px;
 
     position: absolute;
-    left: 27px;
-    top: 5px;
+    left: 20px;
+    top: 4px;
 
     content: "";
     background-image: url("../img/2005.png");
@@ -35,13 +36,13 @@
   }
 
   @media (max-width: $tablet-width) {
-    margin-bottom: 60px;
-    padding: 0 19px 0 213px;
+    margin-bottom: 64px;
+    padding: 0 20px 0 213px;
 
     &::before {
       width: 251px;
       height: 361px;
-      left: 1px;
+      left: -8px;
       top: 1px;
     }
 
@@ -61,7 +62,7 @@
 }
 
 .about__title {
-  margin: 0 0 23px;
+  margin: 0 0 19px;
 
   font-family: $font-secondary;
   font-weight: 400;
@@ -69,7 +70,7 @@
   line-height: 51px;
 
   @media (max-width: $tablet-width) {
-    margin: 0 0 21px 0;
+    margin: 0 0 25px 0;
     font-size: 32px;
     line-height: 45px;
   }
@@ -81,16 +82,45 @@
 }
 
 .about__text {
-  margin: 0;
+  margin: 0 0 20px;
 
   font-size: 16px;
   line-height: 22px;
+
+  @media (max-width: $mobile-min-width) {
+    margin-bottom: 40px;
+  }
 }
+
+.about__span {
+  @media (max-width: $tablet-width) {
+    display: none;
+  }
+}
+
+.about__dots {
+  display: none;
+  font-weight: inherit;
+  font-size: inherit;
+  line-height: inherit;
+
+  @media (max-width: $tablet-width) {
+    display: inline;
+  }
+}
+
+.about__continue {
+  @media (max-width: $tablet-width) {
+    display: none;
+  }
+}
+
 
 .about__more {
   min-width: 180px;
-  margin: 19px 0 20px;
-  padding: 9px 23px 9px 24px;
+  margin: 21px 0 20px;
+  padding: 12px 23px 13px 24px;
+  box-sizing: border-box;
 
   display: inline-block;
   text-align: center;
@@ -100,11 +130,21 @@
   text-transform: uppercase;
   text-decoration: none;
   color: $main-blue;
+  line-height: 16px;
+
   border: 1px solid $main-blue;
   border-radius: 5px;
 
   &:hover {
     color: $white;
     background-color: $main-blue;
+  }
+
+  @media (max-width: $tablet-width) {
+    margin-top: 24px;
+  }
+
+  @media (max-width: $mobile-min-width) {
+    margin-top: -8px;
   }
 }
