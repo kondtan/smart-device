@@ -9,7 +9,7 @@
   left: 50%;
   transform: translateX(-50%);
   background-color: $main-blue;
-  z-index: 20;
+  z-index: 50;
 
   @media (max-width: $tablet-width) {
     display: none;

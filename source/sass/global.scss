@@ -57,7 +57,8 @@ input[type="radio"].visually-hidden {
   border-radius: 5px;
   cursor: pointer;
 
-  &:hover {
+  &:hover,
+  &:focus {
     color: $main-blue;
     background-color: $white;
   }
