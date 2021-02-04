@@ -7,6 +7,16 @@
   var popupForm = document.querySelector('.popup__form');
   var overlay = document.querySelector('.overlay');
 
+  var userName = popup.querySelector('[name=user-name]');
+  var userTel = popup.querySelector('[name=user-tel]');
+  var userText = popup.querySelector('[name=feedback-question]');
+  var checkboxPopup = popup.querySelector('.popup__consent-input');
+
+  var isStorageSupport = true;
+  var storageName = '';
+  var storageTel = '';
+  var storageMessage = '';
+
   openPopupButton.addEventListener('click', function () {
     popup.classList.remove('popup__hidden');
     overlay.classList.remove('overlay__hidden');

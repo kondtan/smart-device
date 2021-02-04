@@ -17,14 +17,6 @@
   var storageTel = '';
   var storageMessage = '';
 
-  // try {
-  //   storageName = localStorage.getItem('userName');
-  //   storageTel = localStorage.getItem('userTel');
-  //   storageMessage = localStorage.getItem('userText');
-  // } catch (err) {
-  //   isStorageSupport = false;
-  // }
-
   openPopupButton.addEventListener('click', function () {
     popup.classList.remove('popup__hidden');
     overlay.classList.remove('overlay__hidden');
@@ -43,26 +35,10 @@
     }
   });
 
-  popupForm.addEventListener('submit', function (evt) {
-    if (!userName.value || !userTel.value || !userText.value || !checkboxPopup.checked) {
-      evt.preventDefault();
-    } else {
-      if (isStorageSupport) {
-        localStorage.setItem('userName', userName.value);
-        localStorage.setItem('userTel', userTel.value);
-        localStorage.setItem('userText', userText.value);
-      }
-    }
-  });
-
   var closeModal = function () {
     popup.classList.add('popup__hidden');
     overlay.classList.add('overlay__hidden');
   };
-
-  popupClose.addEventListener('click', function () {
-    closeModal();
-  });
 
   window.addEventListener('keydown', function (evt) {
     if (evt.keyCode === 27) {
@@ -71,6 +47,10 @@
         closeModal();
       }
     }
+  });
+
+  popupClose.addEventListener('click', function () {
+    closeModal();
   });
 
   if (popup.classList.contains('popup__hidden')) {
