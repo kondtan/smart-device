@@ -1,0 +1,156 @@
+.popup {
+  width: 490px;
+  height: 605px;
+
+  margin: 0 auto;
+
+  position: absolute;
+  top: 136px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: $main-blue;
+  z-index: 20;
+
+  @media (max-width: $tablet-width) {
+    display: none;
+  }
+}
+
+.popup__wrapper {
+  min-height: 605px;
+  padding: 31px 39px 31px 39px;
+
+  position: relative;
+  flex-direction: column;
+}
+
+.popup__form {
+  display: block;
+}
+
+.popup__title {
+  margin: 0 0 10px 0;
+
+  font-family: $font-secondary;
+  font-weight: 400;
+  font-size: 28px;
+  line-height: 39px;
+  color: $white;
+}
+
+.popup__text {
+  width: 390px;
+  margin: 0 0 33px 0;
+  color: $white;
+}
+
+.popup__field {
+  margin: 0 0 33px 0;
+
+  &--text {
+    margin-bottom: 31px;
+  }
+}
+
+.popup__field input,
+.popup__field textarea {
+  width: 412px;
+  height: 50px;
+
+  padding: 6px 16px 10px 16px;
+  box-sizing: border-box;
+
+  font-size: 16px;
+  line-height: 21px;
+
+  background-color: rgba(255, 255, 255, 0.1);
+
+  border: none;
+  outline-color: $white;
+  color: $white;
+}
+
+.popup__field textarea {
+  height: 104px;
+
+  margin-bottom: 0;
+  padding: 13px 17px 11px 16px;
+
+  resize: none;
+}
+
+.popup__button {
+  width: 412px;
+  margin: -5px 0 29px 0;
+
+  &:hover {
+    background-color: $white;
+    color: $main-blue;
+  }
+}
+
+.popup__consent {
+  width: 338px;
+  padding: 5px 12px 6px 49px;
+}
+
+.popup__consent label {
+  position: relative;
+  color: $white;
+
+  cursor: pointer;
+
+  &::before {
+    width: 16px;
+    height: 16px;
+
+    position: absolute;
+    left: -49px;
+
+    content: "";
+    border: 1px solid $white;
+  }
+}
+
+.popup__consent input:checked + label::after {
+  left: -45px;
+  top: 7px;
+}
+
+.popup__close {
+  position: absolute;
+  border: none;
+  width: 24px;
+  height: 24px;
+  right: 17px;
+  top: 16px;
+  background-color: transparent;
+  outline-color: $white;
+  cursor: pointer;
+
+  &::before {
+    position: absolute;
+    content: "";
+    width: 24px;
+    height: 1px;
+    top: 11px;
+    right: 0;
+    background-color: $white;
+    transform: rotate(45deg);
+  }
+
+  &::after {
+    position: absolute;
+    content: "";
+    width: 24px;
+    height: 1px;
+    top: 11px;
+    right: 0;
+    background-color: $white;
+    transform: rotate(-45deg);
+  }
+}
+
+.popup__hidden {
+  display: none;
+}
