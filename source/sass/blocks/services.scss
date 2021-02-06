@@ -1,6 +1,6 @@
 .services {
   background-color: $main-dark-bg;
-  padding-bottom: 127px;
+  padding-bottom: 62px;
 
   @media (max-width: $tablet-width) {
     padding-bottom: 0;
@@ -98,10 +98,6 @@
 
     margin-bottom: 46px;
 
-    &:last-child {
-      margin-bottom: 78px;
-    }
-
     &--production {
       background-image: url("../img/production-tablet.png");
     }
@@ -112,15 +108,16 @@
 
     &--accessories {
       background-image: url("../img/accessories-tablet.png");
+      margin-bottom: 77px;
     }
   }
 
   @media (max-width: $mobile-min-width) {
     margin-bottom: 29px;
-  }
 
-  &:last-child {
-    margin-bottom: 66px;
+    &:last-child {
+      margin-bottom: 66px;
+    }
   }
 }
 
