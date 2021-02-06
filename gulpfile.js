@@ -93,6 +93,12 @@ gulp.task("copy", function () {
   .pipe(gulp.dest("build"));
 });
 
+gulp.task('scripts', function () {
+  return gulp.src('source/js/main_js/*.js')
+      .pipe(concat('main.js'))
+      .pipe(gulp.dest('build/js'));
+});
+
 gulp.task("clean", function () {
   return del("build");
 });

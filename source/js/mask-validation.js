@@ -1,4 +1,3 @@
-
 'use strict';
 (function () {
 
@@ -10,8 +9,8 @@
   };
 
   inputTelPopup.addEventListener('click', function () {
-    var maskPopup = IMask(inputTelPopup, maskOptions);
-    var maskFeedback = IMask(feedbackTel, maskOptions);
+    var maskPopup = iMask(inputTelPopup, maskOptions);
+    var maskFeedback = iMask(feedbackTel, maskOptions);
   });
 
 }());
