@@ -179,7 +179,8 @@
   background-color: $main-blue;
   border-radius: 5px;
 
-  &:hover {
+  &:hover,
+  &:focus {
     color: $main-blue;
     background-color: $white;
   }

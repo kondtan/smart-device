@@ -105,7 +105,7 @@
           <h3 class="advantages__title">Оперативные сроки</h3>
           <p class="advantages__text">Усовершенствованная логистическая система позволяет нам просчитывать стоимость, производить и доставлять заказы плат и комплектующих в самые короткие сроки</p>
         </li>
-        <li class="advantages__item" tabindex="0">
+        <li class="advantages__item advantages__item--supplier" tabindex="0">
           <svg class="advantages__icon advantages__icon--hired" width="35" height="35">
             <use xlink:href="#hired"></use>
           </svg>
@@ -182,7 +182,7 @@
             </p>
             <button class="form__button button" type="submit">Задать вопрос</button>
             <p class="form__consent">
-              <input type="checkbox" class="form__checkbox visually-hidden name="user-consent" value="user-consent" id="user-consent" checked>
+              <input type="checkbox" class="form__checkbox visually-hidden" name="user-consent" value="user-consent" id="user-consent" checked>
               <label for="user-consent" class="form__label-consent">Я согласен на обработку  персональных данных</label>
             </p>
           </form>
@@ -233,7 +233,7 @@
         </div>
         <div class="page-footer__sitemap sitemap">
           <h2 class="sitemap__title" tabindex="0">Разделы сайта</h2>
-          <button class="sitemap__button button-show" aria-label="Показать разделы сайта"></button>
+          <button type="button" class="sitemap__button button-show" aria-label="Показать разделы сайта"></button>
           <ul class="sitemap__list form-hidden">
             <li class="sitemap__item">
               <a href="#">О компании</a>
@@ -260,7 +260,7 @@
         </div>
         <div class="page-footer__contact contact">
           <h2 class="contact__title" tabindex="0">Наш офис</h2>
-          <button class="contact__button button-show" aria-label="Показать контакты"></button>
+          <button type="button" class="contact__button button-show" aria-label="Показать контакты"></button>
           <div class="contact__block form-hidden">
             <span class="contact__address">г. Мытищи, Олимпийский проспект, д.10</span>
             <a class="contact__phone" href="tel:+74955894050">+7 (495) 589-40-50</a>
@@ -310,12 +310,6 @@
   <div class="overlay overlay__hidden"></div>
 
   <script src="https://unpkg.com/imask"></script>
-  <!-- <script src="js/popup.js"></script>
-  <script src="js/mask-validation.js"></script>
-  <script src="js/scroll.js"></script>
-  <script src="js/form.js"></script>
-  <script src="js/toggle.js"></script> -->
-
   <script src="js/main.js"></script>
 
 </body>

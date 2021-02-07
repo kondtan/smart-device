@@ -9,8 +9,8 @@
   };
 
   inputTelPopup.addEventListener('click', function () {
-    var maskPopup = iMask(inputTelPopup, maskOptions);
-    var maskFeedback = iMask(feedbackTel, maskOptions);
+    var maskPopup = IMask(inputTelPopup, maskOptions);
+    var maskFeedback = IMask(feedbackTel, maskOptions);
   });
 
 }());
