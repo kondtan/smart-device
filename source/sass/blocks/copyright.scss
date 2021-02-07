@@ -29,6 +29,18 @@
     color: $main-dark-bg;
     text-decoration: none;
   }
+
+  @media (max-width: $tablet-width) {
+    margin: 7px 26px 0 27px;
+    padding: 0;
+    justify-content: space-between;
+  }
+
+  @media (max-width: $mobile-min-width) {
+    margin: 0 auto;
+    justify-content: center;
+    margin-top: 14px;
+  }
 }
 
 .copyright__text {
@@ -46,4 +58,14 @@
 .copyright__condition,
 .copyright__studio {
   margin: 0 auto;
+
+  @media (max-width: $tablet-width) {
+    margin: 0;
+  }
+}
+
+.copyright__condition {
+  @media (max-width: $mobile-min-width) {
+    margin-bottom: 20px;
+  }
 }
