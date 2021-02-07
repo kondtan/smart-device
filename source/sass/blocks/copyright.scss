@@ -1,6 +1,6 @@
 .copyright {
   width: 100%;
-  padding-top: 14px;
+  padding-top: 15px;
   margin-bottom: 15px;
 
   font-size: 13px;
@@ -11,7 +11,7 @@
 }
 
 .copyright__wrapper {
-  max-width: 1476px;
+  max-width: 1412px;
   margin: 0 auto;
   padding: 0 30px;
 
@@ -41,4 +41,9 @@
   @media (max-width: $tablet-width) {
     display: none;
   }
+}
+
+.copyright__condition,
+.copyright__studio {
+  margin: 0 auto;
 }

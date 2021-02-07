@@ -7,4 +7,11 @@
 
 .social__item {
   margin-right: 15px;
+
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.social__link:hover {
+  opacity: 0.7;
 }
