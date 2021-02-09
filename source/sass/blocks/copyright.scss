@@ -25,7 +25,8 @@
   color: $main-dark-bg;
   opacity: 0.5;
 
-  & a {
+  .copyright__studio,
+  .copyright__condition {
     color: $main-dark-bg;
     text-decoration: none;
   }
