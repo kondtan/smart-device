@@ -116,7 +116,6 @@
   }
 }
 
-
 .about__more {
   min-width: 180px;
   margin: 21px 0 20px;
@@ -124,6 +123,7 @@
   box-sizing: border-box;
 
   display: inline-block;
+  vertical-align: middle;
   text-align: center;
 
   font-family: $font-secondary;
