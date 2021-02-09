@@ -85,7 +85,7 @@
   }
 }
 
-.feedback__title {
+.feedback__container span {
   margin: 0;
   margin-left: -7px;
   margin-bottom: 9px;
@@ -117,5 +117,13 @@
 
   @media (max-width: $mobile-width) {
     margin: 0 0 26px 0;
+  }
+}
+
+.feedback__form {
+  @media (max-width: $mobile-width) {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
 }

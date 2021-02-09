@@ -62,7 +62,7 @@ gulp.task("images", function() {
 });
 
 gulp.task("webp", function () {
-  return gulp.src("source/img/**/circuit_board*.{png,jpg}")
+  return gulp.src("source/img/**/circuit-board*.{png,jpg}")
     .pipe(webp({quality: 90}))
     .pipe(gulp.dest("build/img"));
 });

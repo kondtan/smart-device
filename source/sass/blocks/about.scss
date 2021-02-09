@@ -61,7 +61,7 @@
   }
 }
 
-.about__title {
+.about h2 {
   margin: 0 0 19px;
 
   font-family: $font-secondary;
@@ -82,7 +82,7 @@
   }
 }
 
-.about__text {
+.about p {
   margin: 0 0 20px;
 
   font-size: 16px;
@@ -116,7 +116,7 @@
   }
 }
 
-.about__more {
+.about a {
   min-width: 180px;
   margin: 21px 0 20px;
   padding: 12px 23px 13px 24px;
