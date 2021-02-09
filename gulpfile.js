@@ -95,7 +95,7 @@ gulp.task("copy", function () {
 });
 
 gulp.task("scripts", function () {
-  return gulp.src('source/js/main_js/*.js')
+  return gulp.src('source/js/main-js/*.js')
       .pipe(concat('main.js'))
       .pipe(gulp.dest('build/js'));
 });
