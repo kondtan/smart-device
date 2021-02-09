@@ -1,0 +1,21 @@
+.button {
+  padding: 11px 27px 11px 26px;
+
+  font-family: $font-secondary;
+  font-size: 14px;
+  font-weight: 700;
+
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: $white;
+  border: 1px solid $white;
+  border-radius: 5px;
+  cursor: pointer;
+
+  &:hover,
+  &:focus {
+    color: $main-blue;
+    background-color: $white;
+  }
+}
