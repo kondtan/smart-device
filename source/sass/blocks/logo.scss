@@ -13,23 +13,8 @@
   }
 }
 
-.logo__img--footer {
-  @media (max-width: $mobile-width) {
-    width: 52px;
-    height: 52px;
-  }
-
-  @media (max-width: $mobile-min-width) {
-    margin-left: 20px;
-  }
-}
-
 .logo__text {
   margin-top: 9px;
-
-  // @media (max-width: $tablet-width) {
-  //   margin-top: 8px;
-  // }
 
   @media (max-width: $mobile-min-width) {
     display: none;
@@ -40,19 +25,19 @@
   }
 }
 
-.logo__text-name {
+.logo__text div:first-of-type {
   color: $white;
   font-family: $font-secondary;
   font-size: 25px;
-  // line-height: 29px;
   font-weight: 700;
 }
 
-.logo__text-name--footer {
+.logo__text--footer div:first-of-type {
   color: $logo-dark;
 }
 
-.logo__text-description {
+.logo__text div:nth-of-type(2),
+.logo__text--footer div:nth-of-type(2) {
   color: $logo-gray;
   font-family: $font-logo;
   font-size: 12px;
