@@ -149,12 +149,12 @@
   fill: $white;
 }
 
-.advantages__item:hover .advantages__title,
-.advantages__item:focus .advantages__title {
+.advantages__item:hover h3,
+.advantages__item:focus h3 {
   color: $white;
 }
 
-.advantages__title {
+.advantages h3 {
   margin: 25px 0 15px;
 
   font-family: $font-secondary;

@@ -108,7 +108,7 @@
   }
 }
 
-.feedback__tagline {
+.feedback__container p:first-of-type {
   margin: 0 0 51px -3px;
 
   @media (max-width: $tablet-width) {

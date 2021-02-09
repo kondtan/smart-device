@@ -93,13 +93,13 @@
   }
 }
 
-.about__span {
+.about span:first-of-type {
   @media (max-width: $tablet-width) {
     display: none;
   }
 }
 
-.about__dots {
+.about span:nth-of-type(2) {
   display: none;
   font-weight: inherit;
   font-size: inherit;
@@ -110,7 +110,7 @@
   }
 }
 
-.about__continue {
+.about span:last-of-type {
   @media (max-width: $tablet-width) {
     display: none;
   }

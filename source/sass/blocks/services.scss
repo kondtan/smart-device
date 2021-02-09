@@ -121,7 +121,7 @@
   }
 }
 
-.services__production {
+.services__item h3 {
   max-width: 173px;
 
   margin: 0;
@@ -138,7 +138,7 @@
     font-size: 20px;
     line-height: 30px;
 
-    &--accessories {
+    &:nth-child(3) {
       padding: 50px 45px 43px;
     }
   }
