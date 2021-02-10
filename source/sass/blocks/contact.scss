@@ -65,6 +65,14 @@
   }
 }
 
+.contact__block a {
+  &:hover,
+  &:focus {
+    color: $main-blue;
+    opacity: 1;
+  }
+}
+
 .contact__phone {
   color: $main-dark-bg;
   text-decoration: none;

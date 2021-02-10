@@ -92,4 +92,10 @@
   line-height: 25px;
   color: $main-dark-bg;
   opacity: 0.5;
+
+  &:hover,
+  &:focus {
+    color: $main-blue;
+    opacity: 1;
+  }
 }
