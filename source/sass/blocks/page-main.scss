@@ -185,13 +185,6 @@
     background-color: $white;
   }
 
-  &::before {
-    position: absolute;
-    width: auto;
-    height: 24px;
-    content: "Получить бесплатную консультацию";
-  }
-
   @media (max-width: $tablet-width) {
     width: 380px;
 
@@ -204,10 +197,25 @@
     width: 287px;
     margin: 0 auto;
 
-    &::before {
-      left: 33px;
-      content: "Бесплатная консультация";
+    &--desktop {
+      display: none;
     }
+  }
+
+  @media (max-width: $mobile-min-width) {
+    display: none;
+  }
+}
+
+.page-main__consult--mobile {
+  display: none;
+
+  @media (max-width: $tablet-width) {
+    display: none;
+  }
+
+  @media (max-width: $mobile-width) {
+    display: inline-block;
   }
 }
 
