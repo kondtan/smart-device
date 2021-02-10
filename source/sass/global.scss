@@ -41,3 +41,16 @@ input[type="radio"].visually-hidden {
   clip: rect(0 0 0 0);
   overflow: hidden;
 }
+
+.content--show {   // form-show
+  @media (max-width: $mobile-width) {
+    display: flex;
+    width: 214px;
+  }
+}
+
+.content--hidden {  // form-hidden
+  @media (max-width: $mobile-width) {
+    display: none;
+  }
+}
