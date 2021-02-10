@@ -22,7 +22,7 @@
 (function () {
   var openPopupButton = document.querySelector('.page-header__callback');
   var popup = document.querySelector('.popup');
-  var popupClose = document.querySelector('.popup__close');
+  var closePopupButton = document.querySelector('.popup__close');
   var popupForm = document.querySelector('.popup__form');
   var overlay = document.querySelector('.overlay');
 
@@ -76,7 +76,7 @@
     }
   });
 
-  popupClose.addEventListener('click', function () {
+  closePopupButton.addEventListener('click', function () {
     closeModal();
   });
 
