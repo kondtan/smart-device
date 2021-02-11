@@ -90,6 +90,7 @@
   margin-left: -7px;
   margin-bottom: 9px;
 
+  display: block;
   font-family: $font-secondary;
   font-size: 36px;
   font-weight: 400;
@@ -109,7 +110,7 @@
 }
 
 .feedback__container p:first-of-type {
-  margin: 0 0 51px -3px;
+  margin: 0 0 48px -3px;
 
   @media (max-width: $tablet-width) {
     margin: 0 0 53px 0;

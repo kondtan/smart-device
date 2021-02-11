@@ -160,16 +160,16 @@
     if (sitemapButton.classList.contains('toggle--hidden')) {  // -
       sitemapButton.classList.remove('toggle--hidden');
       sitemapButton.classList.add('toggle--show');
-      sitemapList.classList.toggle('form--hidden');
+      sitemapList.classList.toggle('content--hidden');
 
       buttonContact.classList.remove('toggle--show');
       buttonContact.classList.add('toggle--hidden');
-      contactBlock.classList.add('form--hidden');
-      contactBlock.classList.remove('form--show');
+      contactBlock.classList.add('content--hidden');
+      contactBlock.classList.remove('content--show');
     } else {
       sitemapButton.classList.add('toggle--hidden');
       sitemapButton.classList.remove('toggle--show');
-      sitemapList.classList.toggle('form--hidden');
+      sitemapList.classList.toggle('content--hidden');
     }
   });
 
@@ -177,16 +177,16 @@
     if (buttonContact.classList.contains('toggle--hidden')) {
       buttonContact.classList.remove('toggle--hidden');
       buttonContact.classList.add('toggle--show');
-      contactBlock.classList.toggle('form--hidden');
+      contactBlock.classList.toggle('content--hidden');
 
       sitemapButton.classList.remove('toggle--show');
       sitemapButton.classList.add('toggle--hidden');
-      sitemapList.classList.add('form--hidden');
-      sitemapList.classList.remove('form--show');
+      sitemapList.classList.add('content--hidden');
+      sitemapList.classList.remove('content--show');
     } else {
       buttonContact.classList.add('toggle--hidden');
       buttonContact.classList.remove('toggle--show');
-      contactBlock.classList.toggle('form--hidden');
+      contactBlock.classList.toggle('content--hidden');
     }
   });
 })();

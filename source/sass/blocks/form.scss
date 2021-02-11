@@ -65,7 +65,6 @@
     margin: 0;
 
     &--text {
-      // width: 100%;
       height: 103px;
 
       margin-bottom: 30px;
@@ -82,6 +81,13 @@
   resize: none;
   font-size: 16px;
   line-height: 22px;
+
+  @media (max-width: $mobile-min-width) {
+    width: 100%;
+    height: 104px;
+
+    margin-bottom: 33px;
+  }
 }
 
 .form__name,
@@ -197,15 +203,3 @@
   }
 }
 
-.form--show {
-  @media (max-width: $mobile-width) {
-    display: flex;
-    width: 214px;
-  }
-}
-
-.form--hidden {
-  @media (max-width: $mobile-width) {
-    display: none;
-  }
-}
