@@ -197,13 +197,13 @@
   }
 }
 
-.form-hidden {
+.form--hidden {
   @media (max-width: $mobile-width) {
     display: none;
   }
 }
 
-.form-show {
+.form--show {
   @media (max-width: $mobile-width) {
     display: flex;
     width: 214px;

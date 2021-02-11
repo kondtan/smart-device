@@ -46,7 +46,7 @@
   }
 }
 
-.sitemap ul {
+.sitemap__list {
   max-height: 110px;
   margin: 0;
   padding: 0;
@@ -71,7 +71,7 @@
   }
 }
 
-.sitemap__toggle {
+.sitemap__button {
   display: none;
 
   @media (max-width: $mobile-width) {
