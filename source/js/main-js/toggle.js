@@ -11,7 +11,7 @@
   var contactBlock = document.querySelector('.contact__block');
 
   titleSitemap.addEventListener('click', function () {
-    if (sitemapButton.classList.contains('toggle--hidden')) {  // -
+    if (sitemapButton.classList.contains('toggle--hidden')) {
       sitemapButton.classList.remove('toggle--hidden');
       sitemapButton.classList.add('toggle--show');
       sitemapList.classList.toggle('content--hidden');

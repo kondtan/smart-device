@@ -57,6 +57,7 @@
   <header class="page-header">
     <div class="page-header__wrapper">
       <a href="" class="page-header__logo logo">
+        <!-- 1x: 52*52px; 2x: 104*104 -->
         <img src="./img/logo.svg" width="52" height="52" alt="Логотип Smart Device - магазин печатных плат">
         <div class="logo__text">
           <div>Smart Device</div>
@@ -93,11 +94,18 @@
         <a class="page-main__consult page-main__consult--mobile" aria-label="Получить бесплатную консультацию">Бесплатная консультация</a>
         <a class="page-main__scroll-down">Скролл вниз</a>
           <picture>
+            <!-- 1x: 301*220px; 2x: 602*440px -->
             <source type="image/webp" media="(max-width: 767px)" srcset="./img/circuit-board-mobile@1x.webp 1x, ./img/circuit-board-mobile@2x.webp 2x">
+            <!-- 1x: 260*340px; 2x: 520*680px -->
             <source type="image/webp" media="(max-width: 1023px)" srcset="./img/circuit-board-tablet@1x.webp 1x, ./img/circuit-board-tablet@2x.webp 2x">
+            <!-- 1x: 705*515px; 2x: 1410*1030px -->
             <source type="image/webp" srcset="./img/circuit-board-desktop@1x.webp, ./img/circuit-board-desktop@2x.webp 2x">
+
+            <!-- 1x: 301*220px; 2x: 602*440px -->
             <source media="(max-width: 767px)" srcset="./img/circuit-board-mobile@1x.png 1x, ./img/circuit-board-mobile@2x.png 2x">
+            <!-- 1x: 260*340px; 2x: 520*680px -->
             <source media="(max-width: 1023px)" srcset="./img/circuit-board-tablet@1x.png 1x, ./img/circuit-board-tablet@2x.png 2x">
+            <!-- 1x: 705*515px; 2x: 1410*1030px -->
             <img src="./img/circuit-board-desktop@1x.png" srcset="./img/circuit-board-desktop@2x.png 2x" alt="Печатная плата" width="301" height="220">
           </picture>
         </div>
@@ -203,6 +211,7 @@
         <div class="page-footer__block">
           <div class="page-footer__block-wrapper">
             <a href="" class="page-footer__logo logo">
+              <!-- 1x: 52*52px; 2x: 104*104 -->
               <img src="./img/logo.svg" width="52" height="52" alt="Логотип Smart Device - магазин печатных плат">
               <div class="logo__text logo__text--footer">
                 <div>Service Device</div>
@@ -315,7 +324,7 @@
   </div>
   <div class="overlay overlay__hidden"></div>
 
-  <script src="js/vendor.js"></script>
+  <!-- <script src="js/vendor.js"></script> -->
   <script src="js/main.js"></script>
 
 </body>
