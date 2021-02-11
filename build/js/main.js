@@ -161,6 +161,11 @@
       sitemapButton.classList.remove('toggle--hidden');
       sitemapButton.classList.add('toggle--show');
       sitemapList.classList.toggle('form--hidden');
+
+      buttonContact.classList.remove('toggle--show');
+      buttonContact.classList.add('toggle--hidden');
+      contactBlock.classList.add('form--hidden');
+      contactBlock.classList.remove('form--show');
     } else {
       sitemapButton.classList.add('toggle--hidden');
       sitemapButton.classList.remove('toggle--show');
@@ -173,6 +178,11 @@
       buttonContact.classList.remove('toggle--hidden');
       buttonContact.classList.add('toggle--show');
       contactBlock.classList.toggle('form--hidden');
+
+      sitemapButton.classList.remove('toggle--show');
+      sitemapButton.classList.add('toggle--hidden');
+      sitemapList.classList.add('form--hidden');
+      sitemapList.classList.remove('form--show');
     } else {
       buttonContact.classList.add('toggle--hidden');
       buttonContact.classList.remove('toggle--show');
