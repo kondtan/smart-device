@@ -11,26 +11,26 @@
   var contactBlock = document.querySelector('.contact__block');
 
   titleSitemap.addEventListener('click', function () {
-    if (sitemapButton.classList.contains('button--hidden')) {
-      sitemapButton.classList.remove('button--hidden');
-      sitemapButton.classList.add('button--show');
-      sitemapList.classList.toggle('form--show');
+    if (sitemapButton.classList.contains('toggle--hidden')) {  // -
+      sitemapButton.classList.remove('toggle--hidden');
+      sitemapButton.classList.add('toggle--show');
+      sitemapList.classList.toggle('form--hidden');
     } else {
-      sitemapButton.classList.add('button--hidden');
-      sitemapButton.classList.remove('button--show');
-      sitemapList.classList.toggle('form--show');
+      sitemapButton.classList.add('toggle--hidden');
+      sitemapButton.classList.remove('toggle--show');
+      sitemapList.classList.toggle('form--hidden');
     }
   });
 
   titleContact.addEventListener('click', function () {
-    if (buttonContact.classList.contains('button--hidden')) {
-      buttonContact.classList.remove('button--hidden');
-      buttonContact.classList.add('button--show');
-      contactBlock.classList.toggle('form--show');
+    if (buttonContact.classList.contains('toggle--hidden')) {
+      buttonContact.classList.remove('toggle--hidden');
+      buttonContact.classList.add('toggle--show');
+      contactBlock.classList.toggle('form--hidden');
     } else {
-      buttonContact.classList.add('button--hidden');
-      buttonContact.classList.remove('button--show');
-      contactBlock.classList.toggle('form--show');
+      buttonContact.classList.add('toggle--hidden');
+      buttonContact.classList.remove('toggle--show');
+      contactBlock.classList.toggle('form--hidden');
     }
   });
 })();
