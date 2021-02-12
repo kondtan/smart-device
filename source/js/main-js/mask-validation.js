@@ -1,5 +1,5 @@
-
 'use strict';
+
 (function () {
 
   var inputTelPopup = document.getElementById('feedback-tel-popup');
@@ -9,9 +9,18 @@
     lazy: false
   };
 
-  inputTelPopup.addEventListener('click', function () {
-    var maskPopup = IMask(inputTelPopup, maskOptions);
-    var maskFeedback = IMask(feedbackTel, maskOptions);
+  var popupMask = new window.IMask(inputTelPopup, maskOptions);
+  popupMask.value = inputTelPopup.value;
+
+  var feedbackMask = new window.IMask(feedbackTel, maskOptions);
+  feedbackMask.value = feedbackTel.value;
+
+  inputTelPopup.addEventListener('focus', function () {
+    inputTelPopup.value = '+7(';
+  });
+
+  feedbackTel.addEventListener('focus', function () {
+    feedbackTel.value = '+7(';
   });
 
 }());

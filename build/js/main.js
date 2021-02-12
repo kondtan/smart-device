@@ -17,20 +17,30 @@
 
 })();
 
-
 'use strict';
+
 (function () {
 
   var inputTelPopup = document.getElementById('feedback-tel-popup');
   var feedbackTel = document.getElementById('feedback-phone');
   var maskOptions = {
     mask: '+{7}(000)000-00-00',
-    lazy: false
+    lazy: false,
+    placeholderChar: '#'
   };
 
-  inputTelPopup.addEventListener('click', function () {
-    var maskPopup = IMask(inputTelPopup, maskOptions);
-    var maskFeedback = IMask(feedbackTel, maskOptions);
+  var mask = new window.IMask(inputTelPopup, maskOptions);
+  mask.value = inputTelPopup.value;
+
+  var mask2 = new window.IMask(feedbackTel, maskOptions);
+  mask2.value = feedbackTel.value;
+
+  inputTelPopup.addEventListener('focus', function () {
+    inputTelPopup.value = '+7(';
+  });
+
+  feedbackTel.addEventListener('focus', function () {
+    feedbackTel.value = '+7(';
   });
 
 }());
@@ -157,7 +167,7 @@
   var contactBlock = document.querySelector('.contact__block');
 
   titleSitemap.addEventListener('click', function () {
-    if (sitemapButton.classList.contains('toggle--hidden')) {  // -
+    if (sitemapButton.classList.contains('toggle--hidden')) {
       sitemapButton.classList.remove('toggle--hidden');
       sitemapButton.classList.add('toggle--show');
       sitemapList.classList.toggle('content--hidden');
