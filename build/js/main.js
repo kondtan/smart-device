@@ -1,7 +1,7 @@
 'use strict';
 
 (function () {
-  var form = document.querySelector('.feedback');
+  var form = document.querySelector('.feedback__form');
   var userName = form.querySelector('[name=username]');
   var userPhone = form.querySelector('[name=phone]');
   var userText = form.querySelector('[name=feedback-question]');
@@ -25,15 +25,14 @@
   var feedbackTel = document.getElementById('feedback-phone');
   var maskOptions = {
     mask: '+{7}(000)000-00-00',
-    lazy: false,
-    placeholderChar: '#'
+    lazy: false
   };
 
-  var mask = new window.IMask(inputTelPopup, maskOptions);
-  mask.value = inputTelPopup.value;
+  var popupMask = new window.IMask(inputTelPopup, maskOptions);
+  popupMask.value = inputTelPopup.value;
 
-  var mask2 = new window.IMask(feedbackTel, maskOptions);
-  mask2.value = feedbackTel.value;
+  var feedbackMask = new window.IMask(feedbackTel, maskOptions);
+  feedbackMask.value = feedbackTel.value;
 
   inputTelPopup.addEventListener('focus', function () {
     inputTelPopup.value = '+7(';
