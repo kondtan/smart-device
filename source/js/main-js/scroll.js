@@ -15,11 +15,15 @@
     });
   }
 
-  buttonToAdvantages.addEventListener('click', function () {
-    scrollTo(blockAdvantages);
-  });
+  if (typeof (buttonToAdvantages) !== 'undefined' && buttonToAdvantages !== null) {
+    buttonToAdvantages.addEventListener('click', function () {
+      scrollTo(blockAdvantages);
+    });
+  }
 
-  buttonToConsultation.addEventListener('click', function () {
-    scrollTo(blockConsultation);
-  });
+  if (typeof (buttonToConsultation) !== 'undefined' && buttonToConsultation !== null) {
+    buttonToConsultation.addEventListener('click', function () {
+      scrollTo(blockConsultation);
+    });
+  }
 })();

@@ -2,19 +2,21 @@
 
 (function () {
   var form = document.querySelector('.feedback__form');
-  var userName = form.querySelector('[name=username]');
-  var userPhone = form.querySelector('[name=phone]');
-  var userText = form.querySelector('[name=feedback-question]');
-  var checkboxPopup = form.querySelector('[name=user-consent]');
 
-  form.addEventListener('submit', function (evt) {
-    if (!userName.value || !userPhone.value || !userText.value || !checkboxPopup.checked) {
-      evt.preventDefault();
-    } else {
-      form.submit();
-    }
-  });
+  if (typeof (form) !== 'undefined' && form !== null) {
+    var userName = form.querySelector('[name=username]');
+    var userPhone = form.querySelector('[name=phone]');
+    var userText = form.querySelector('[name=feedback-question]');
+    var checkboxPopup = form.querySelector('[name=user-consent]');
 
+    form.addEventListener('submit', function (evt) {
+      if (!userName.value || !userPhone.value || !userText.value || !checkboxPopup.checked) {
+        evt.preventDefault();
+      } else {
+        form.submit();
+      }
+    });
+  }
 })();
 
 'use strict';
@@ -22,109 +24,113 @@
 (function () {
 
   var inputTelPopup = document.getElementById('feedback-tel-popup');
-  var feedbackTel = document.getElementById('feedback-phone');
-  var maskOptions = {
-    mask: '+{7}(000)000-00-00',
-    lazy: false
-  };
 
-  var popupMask = new window.IMask(inputTelPopup, maskOptions);
-  popupMask.value = inputTelPopup.value;
+  if (typeof (inputTelPopup) !== 'undefined' && inputTelPopup !== null) {
+    var feedbackTel = document.getElementById('feedback-phone');
+    var maskOptions = {
+      mask: '+{7}(000)000-00-00',
+      lazy: false
+    };
 
-  var feedbackMask = new window.IMask(feedbackTel, maskOptions);
-  feedbackMask.value = feedbackTel.value;
+    var popupMask = new window.IMask(inputTelPopup, maskOptions);
+    popupMask.value = inputTelPopup.value;
 
-  inputTelPopup.addEventListener('focus', function () {
-    inputTelPopup.value = '+7(';
-  });
+    var feedbackMask = new window.IMask(feedbackTel, maskOptions);
+    feedbackMask.value = feedbackTel.value;
 
-  feedbackTel.addEventListener('focus', function () {
-    feedbackTel.value = '+7(';
-  });
+    inputTelPopup.addEventListener('focus', function () {
+      inputTelPopup.value = '+7(';
+    });
 
+    feedbackTel.addEventListener('focus', function () {
+      feedbackTel.value = '+7(';
+    });
+  }
 }());
 
 'use strict';
 
 (function () {
-  var openPopupButton = document.querySelector('.page-header__callback');
   var popup = document.querySelector('.popup');
-  var closePopupButton = document.querySelector('.popup__close');
-  var popupForm = document.querySelector('.popup__form');
-  var overlay = document.querySelector('.overlay');
 
-  var userName = popup.querySelector('[name=user-name]');
-  var userTel = popup.querySelector('[name=user-tel]');
-  var userText = popup.querySelector('[name=feedback-question]');
-  var checkboxPopup = popup.querySelector('.popup__consent-input');
+  if (typeof (popup) !== 'undefined' && popup !== null) {
+    var openPopupButton = document.querySelector('.page-header__callback');
+    var closePopupButton = document.querySelector('.popup__close');
+    var popupForm = document.querySelector('.popup__form');
+    var overlay = document.querySelector('.overlay');
 
-  var isStorageSupport = true;
-  var storageName = '';
-  var storageTel = '';
-  var storageMessage = '';
+    var userName = popup.querySelector('[name=user-name]');
+    var userTel = popup.querySelector('[name=user-tel]');
+    var userText = popup.querySelector('[name=feedback-question]');
+    var checkboxPopup = popup.querySelector('.popup__consent-input');
 
-  try {
-    storageName = localStorage.getItem('userName');
-    storageTel = localStorage.getItem('userTel');
-    storageMessage = localStorage.getItem('userText');
-  } catch (err) {
-    isStorageSupport = false;
-  }
+    var isStorageSupport = true;
+    var storageName = '';
+    var storageTel = '';
+    var storageMessage = '';
 
-  openPopupButton.addEventListener('click', function () {
-    popup.classList.remove('popup__hidden');
-    overlay.classList.remove('overlay__hidden');
+    try {
+      storageName = localStorage.getItem('userName');
+      storageTel = localStorage.getItem('userTel');
+      storageMessage = localStorage.getItem('userText');
+    } catch (err) {
+      isStorageSupport = false;
+    }
 
-    if (storageName) {
-      userName.value = storageName;
-      if (storageTel) {
-        userTel.value = storageTel;
-        userText.value = storageMessage;
+    openPopupButton.addEventListener('click', function () {
+      popup.classList.remove('popup__hidden');
+      overlay.classList.remove('overlay__hidden');
+
+      if (storageName) {
+        userName.value = storageName;
+        if (storageTel) {
+          userTel.value = storageTel;
+          userText.value = storageMessage;
+        } else {
+          userTel.focus();
+        }
+        userText.focus();
       } else {
-        userTel.focus();
+        userName.focus();
       }
-      userText.focus();
-    } else {
-      userName.focus();
-    }
-  });
+    });
 
-  var closeModal = function () {
-    popup.classList.add('popup__hidden');
-    overlay.classList.add('overlay__hidden');
-  };
+    var closeModal = function () {
+      popup.classList.add('popup__hidden');
+      overlay.classList.add('overlay__hidden');
+    };
 
-  window.addEventListener('keydown', function (evt) {
-    if (evt.keyCode === 27) {
-      evt.preventDefault();
-      if (!popup.classList.contains('popup__hidden')) {
-        closeModal();
+    window.addEventListener('keydown', function (evt) {
+      if (evt.keyCode === 27) {
+        evt.preventDefault();
+        if (!popup.classList.contains('popup__hidden')) {
+          closeModal();
+        }
       }
-    }
-  });
+    });
 
-  closePopupButton.addEventListener('click', function () {
-    closeModal();
-  });
-
-  if (popup.classList.contains('popup__hidden')) {
-    overlay.addEventListener('click', function () {
+    closePopupButton.addEventListener('click', function () {
       closeModal();
     });
-  }
 
-  popupForm.addEventListener('submit', function (evt) {
-    if (!userName.value || !userTel.value || !userText.value || !checkboxPopup.checked) {
-      evt.preventDefault();
-    } else {
-      if (isStorageSupport) {
-        localStorage.setItem('userName', userName.value);
-        localStorage.setItem('userTel', userTel.value);
-        localStorage.setItem('userText', userText.value);
-      }
+    if (popup.classList.contains('popup__hidden')) {
+      overlay.addEventListener('click', function () {
+        closeModal();
+      });
     }
-  });
 
+    popupForm.addEventListener('submit', function (evt) {
+      if (!userName.value || !userTel.value || !userText.value || !checkboxPopup.checked) {
+        evt.preventDefault();
+      } else {
+        if (isStorageSupport) {
+          localStorage.setItem('userName', userName.value);
+          localStorage.setItem('userTel', userTel.value);
+          localStorage.setItem('userText', userText.value);
+        }
+      }
+    });
+  }
 })();
 
 'use strict';
@@ -144,13 +150,17 @@
     });
   }
 
-  buttonToAdvantages.addEventListener('click', function () {
-    scrollTo(blockAdvantages);
-  });
+  if (typeof (buttonToAdvantages) !== 'undefined' && buttonToAdvantages !== null) {
+    buttonToAdvantages.addEventListener('click', function () {
+      scrollTo(blockAdvantages);
+    });
+  }
 
-  buttonToConsultation.addEventListener('click', function () {
-    scrollTo(blockConsultation);
-  });
+  if (typeof (buttonToConsultation) !== 'undefined' && buttonToConsultation !== null) {
+    buttonToConsultation.addEventListener('click', function () {
+      scrollTo(blockConsultation);
+    });
+  }
 })();
 
 'use strict';
@@ -165,37 +175,41 @@
   var buttonContact = document.querySelector('.contact__button');
   var contactBlock = document.querySelector('.contact__block');
 
-  titleSitemap.addEventListener('click', function () {
-    if (sitemapButton.classList.contains('toggle--hidden')) {
-      sitemapButton.classList.remove('toggle--hidden');
-      sitemapButton.classList.add('toggle--show');
-      sitemapList.classList.toggle('content--hidden');
+  if (typeof (titleSitemap) !== 'undefined' && titleSitemap !== null) {
+    titleSitemap.addEventListener('click', function () {
+      if (sitemapButton.classList.contains('toggle--hidden')) {
+        sitemapButton.classList.remove('toggle--hidden');
+        sitemapButton.classList.add('toggle--show');
+        sitemapList.classList.toggle('content--hidden');
 
-      buttonContact.classList.remove('toggle--show');
-      buttonContact.classList.add('toggle--hidden');
-      contactBlock.classList.add('content--hidden');
-      contactBlock.classList.remove('content--show');
-    } else {
-      sitemapButton.classList.add('toggle--hidden');
-      sitemapButton.classList.remove('toggle--show');
-      sitemapList.classList.toggle('content--hidden');
-    }
-  });
+        buttonContact.classList.remove('toggle--show');
+        buttonContact.classList.add('toggle--hidden');
+        contactBlock.classList.add('content--hidden');
+        contactBlock.classList.remove('content--show');
+      } else {
+        sitemapButton.classList.add('toggle--hidden');
+        sitemapButton.classList.remove('toggle--show');
+        sitemapList.classList.toggle('content--hidden');
+      }
+    });
+  }
 
-  titleContact.addEventListener('click', function () {
-    if (buttonContact.classList.contains('toggle--hidden')) {
-      buttonContact.classList.remove('toggle--hidden');
-      buttonContact.classList.add('toggle--show');
-      contactBlock.classList.toggle('content--hidden');
+  if (typeof (titleContact) !== 'undefined' && titleContact !== null) {
+    titleContact.addEventListener('click', function () {
+      if (buttonContact.classList.contains('toggle--hidden')) {
+        buttonContact.classList.remove('toggle--hidden');
+        buttonContact.classList.add('toggle--show');
+        contactBlock.classList.toggle('content--hidden');
 
-      sitemapButton.classList.remove('toggle--show');
-      sitemapButton.classList.add('toggle--hidden');
-      sitemapList.classList.add('content--hidden');
-      sitemapList.classList.remove('content--show');
-    } else {
-      buttonContact.classList.add('toggle--hidden');
-      buttonContact.classList.remove('toggle--show');
-      contactBlock.classList.toggle('content--hidden');
-    }
-  });
+        sitemapButton.classList.remove('toggle--show');
+        sitemapButton.classList.add('toggle--hidden');
+        sitemapList.classList.add('content--hidden');
+        sitemapList.classList.remove('content--show');
+      } else {
+        buttonContact.classList.add('toggle--hidden');
+        buttonContact.classList.remove('toggle--show');
+        contactBlock.classList.toggle('content--hidden');
+      }
+    });
+  }
 })();
