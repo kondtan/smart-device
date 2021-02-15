@@ -79,6 +79,7 @@
   cursor: pointer;
   background-repeat: no-repeat;
   background-color: $main-dark-bg;
+  background-size: cover;
 
   &--production {
     // 1x: 370*620px
