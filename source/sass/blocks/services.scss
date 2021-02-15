@@ -1,6 +1,6 @@
 .services {
   background-color: $main-dark-bg;
-  padding-bottom: 127px;
+  padding-bottom: 102px;
 
   @media (max-width: $tablet-width) {
     padding-bottom: 0;
@@ -74,6 +74,7 @@
   max-width: 370px;
   height: 620px;
   margin: 0;
+  margin-bottom: 25px;
 
   position: relative;
   cursor: pointer;
