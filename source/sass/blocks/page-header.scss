@@ -8,7 +8,7 @@
 }
 
 .page-header__logo {
-  flex-grow: 1;
+  max-width: 202px;
 }
 
 .page-header__wrapper {
@@ -18,7 +18,7 @@
 
   z-index: 20;
   display: flex;
-  justify-items: space-between;
+  justify-content: space-between;
 
   color: $white;
 
@@ -53,30 +53,10 @@
 .page-header__mail {
   position: relative;
 
-  &::before {
-    position: absolute;
-    content: "";
-    background-image: url("../img/envelope.svg");
-    background-repeat: no-repeat;
-    background-size: contain;
-    width: 19px;
-    height: 14px;
-    left: -10px;
-    top: 4px;
-  }
-
   @media (max-width: $tablet-width) {
     width: 30px;
     height: 31px;
     margin: 0;
-    margin-left: 25px;
-
-    &::before {
-      width: 25px;
-      height: 19px;
-
-      left: -2px;
-    }
   }
 
   @media (max-width: $mobile-min-width) {
@@ -87,41 +67,62 @@
   }
 }
 
-.page-header__call {
-  margin-left: 95px;
-  position: relative;
+.page-header__mail svg {
+  position: absolute;
 
-  &::before {
-    position: absolute;
-    content: "";
-    background-image: url("../img/phone-call.svg");
-    background-repeat: no-repeat;
-    background-size: contain;
-    width: 18px;
-    height: 18px;
-    left: -7px;
-    top: 2px;
+  width: 19px;
+  height: 14px;
+  left: -38px;
+  top: 4px;
+
+  fill: $main-blue;
+
+  @media (max-width: $tablet-width) {
+    width: 25px;
+    height: 19px;
+
+    left: 2px;
   }
+
+  @media (max-width: $mobile-min-width) {
+    left: 16px;
+    top: -2px;
+  }
+}
+
+.page-header__call {
+  margin-left: 123px;
+  position: relative;
 
   @media (max-width: $tablet-width) {
     width: 30px;
     height: 36px;
     margin: 0;
     margin-left: 20px;
+  }
+}
 
-    &::before {
-      width: 24px;
-      height: 24px;
+.page-header__call svg {
+  width: 18px;
+  height: 18px;
 
-      left: 6px;
-    }
+  position: absolute;
+  content: "";
+  left: -34px;
+  top: 2px;
+
+  fill: $main-blue;
+
+  @media (max-width: $tablet-width) {
+    width: 24px;
+    height: 24px;
+
+    left: 6px;
   }
 
   @media (max-width: $mobile-min-width) {
-    &::before {
-      top: -3px;
-      left: 10px;
-    }
+    top: -3px;
+    left: 10px;
   }
 }
 
@@ -133,7 +134,11 @@
 
   text-decoration: none;
   color: $white;
+  background-color: transparent;
+}
 
+.page-header__mail span,
+.page-header__call span {
   @media (max-width: $tablet-width) {
     display: none;
   }
@@ -146,4 +151,11 @@
   @media (max-width: $tablet-width) {
     display: none;
   }
+}
+
+.page-header__mail:hover svg,
+.page-header__call:hover svg,
+.page-header__mail:focus svg,
+.page-header__call:focus svg {
+  fill: $nav-hover;
 }

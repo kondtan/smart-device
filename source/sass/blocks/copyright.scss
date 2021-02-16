@@ -69,6 +69,11 @@
 .copyright__studio {
   margin: 0 auto;
 
+  &:hover,
+  &:focus {
+    color: $main-blue;
+  }
+
   @media (max-width: $tablet-width) {
     margin: 0;
   }
