@@ -100,11 +100,13 @@
     var closeModal = function () {
       popup.classList.add('popup__hidden');
       overlay.classList.add('overlay__hidden');
+      document.body.style.overflow = 'visible';
     };
 
     window.addEventListener('keydown', function (evt) {
       if (evt.keyCode === 27) {
         evt.preventDefault();
+        document.body.style.overflow = 'visible';
         if (!popup.classList.contains('popup__hidden')) {
           closeModal();
         }

@@ -67,6 +67,8 @@
 
 .feedback__container {
   width: 570px;
+
+  padding-left: 25px;
   margin: 0 0 113px;
   margin-top: 91px;
 
@@ -76,6 +78,8 @@
 
   @media (max-width: $tablet-width) {
     width: 591px;
+
+    padding-left: 0;
     margin: 0 0 104px 7px;
   }
 
@@ -110,7 +114,9 @@
 }
 
 .feedback__container p:first-of-type {
-  margin: 0 0 48px -3px;
+  // margin: 0 0 48px -3px;
+  margin: 0 0 40px -3px;
+
 
   @media (max-width: $tablet-width) {
     margin: 0 0 53px 0;

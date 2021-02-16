@@ -76,6 +76,10 @@
 
 .copyright__studio {
   margin-right: 2px;
+
+  @media (max-width: $mobile-width) {
+    margin: 0;
+  }
 }
 
 .copyright__condition {

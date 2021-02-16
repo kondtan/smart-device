@@ -31,17 +31,15 @@
   color: $main-dark-bg;
 
   @media (max-width: $mobile-width) {
-    margin-bottom: 35px;
-    padding: 40px 25px 0;
+    margin-bottom: 0;
+    padding: 29px 25px;
   }
 
   @media (max-width: $mobile-min-width) {
     max-width: 286px;
-    height: 72px;
+    padding: 29px 0;
+    padding-bottom: 27px;
 
-    margin: 0;
-    padding: 0;
-    padding-top: 29px;
     box-sizing: border-box;
   }
 }
@@ -76,13 +74,12 @@
 
   @media (max-width: $mobile-width) {
     position: absolute;
-    top: 40px;
+    top: 28px;
     right: 60px;
   }
 
   @media (max-width: $mobile-min-width) {
     right: 19px;
-    top: 28px;
   }
 }
 
