@@ -123,9 +123,16 @@
       });
     }
 
+    // var sendForm = function () {
+    //   modal.classList.add('visually-hidden');
+    //   document.body.style.overflow = 'visible';
+    //   document.removeEventListener('keydown', closeEscModal);
+    // };
+
     popupForm.addEventListener('submit', function (evt) {
       if (!userName.value || !userTel.value || !userText.value || !checkboxPopup.checked) {
         evt.preventDefault();
+        closeModal();
       } else {
         if (isStorageSupport) {
           localStorage.setItem('userName', userName.value);
