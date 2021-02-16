@@ -31,6 +31,8 @@
       popup.classList.remove('popup__hidden');
       overlay.classList.remove('overlay__hidden');
 
+      document.body.style.overflow = 'hidden';
+
       if (storageName) {
         userName.value = storageName;
         if (storageTel) {
