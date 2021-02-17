@@ -47,7 +47,7 @@
       }
     });
 
-    var closeModal = function () {
+    var closePopup = function () {
       popup.classList.add('popup__hidden');
       overlay.classList.add('overlay__hidden');
       document.body.style.overflow = 'visible';
@@ -58,18 +58,18 @@
         evt.preventDefault();
         document.body.style.overflow = 'visible';
         if (!popup.classList.contains('popup__hidden')) {
-          closeModal();
+          closePopup();
         }
       }
     });
 
     closePopupButton.addEventListener('click', function () {
-      closeModal();
+      closePopup();
     });
 
     if (popup.classList.contains('popup__hidden')) {
       overlay.addEventListener('click', function () {
-        closeModal();
+        closePopup();
       });
     }
 

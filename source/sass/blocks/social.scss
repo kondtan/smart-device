@@ -12,6 +12,7 @@
   flex-wrap: wrap;
 }
 
-.social__link:hover {
+.social__link:hover,
+.social__link:focus {
   opacity: 0.7;
 }

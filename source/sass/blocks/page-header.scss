@@ -155,7 +155,7 @@
 
 .page-header__mail:hover svg,
 .page-header__call:hover svg,
-.page-header__mail:focus svg,
-.page-header__call:focus svg {
+.page-header__mail:focus-within svg,
+.page-header__call:focus-within svg {
   fill: $nav-hover;
 }

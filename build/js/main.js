@@ -97,7 +97,7 @@
       }
     });
 
-    var closeModal = function () {
+    var closePopup = function () {
       popup.classList.add('popup__hidden');
       overlay.classList.add('overlay__hidden');
       document.body.style.overflow = 'visible';
@@ -108,31 +108,24 @@
         evt.preventDefault();
         document.body.style.overflow = 'visible';
         if (!popup.classList.contains('popup__hidden')) {
-          closeModal();
+          closePopup();
         }
       }
     });
 
     closePopupButton.addEventListener('click', function () {
-      closeModal();
+      closePopup();
     });
 
     if (popup.classList.contains('popup__hidden')) {
       overlay.addEventListener('click', function () {
-        closeModal();
+        closePopup();
       });
     }
-
-    // var sendForm = function () {
-    //   modal.classList.add('visually-hidden');
-    //   document.body.style.overflow = 'visible';
-    //   document.removeEventListener('keydown', closeEscModal);
-    // };
 
     popupForm.addEventListener('submit', function (evt) {
       if (!userName.value || !userTel.value || !userText.value || !checkboxPopup.checked) {
         evt.preventDefault();
-        closeModal();
       } else {
         if (isStorageSupport) {
           localStorage.setItem('userName', userName.value);
