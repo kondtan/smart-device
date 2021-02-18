@@ -25,12 +25,6 @@
   color: $main-dark-bg;
   opacity: 0.5;
 
-  .copyright__studio,
-  .copyright__condition {
-    color: $main-dark-bg;
-    text-decoration: none;
-  }
-
   @media (max-width: $tablet-width) {
     margin: 7px 26px 0 27px;
     padding: 0;
@@ -65,9 +59,12 @@
   }
 }
 
-.copyright__condition,
-.copyright__studio {
+.copyright__studio,
+.copyright__condition {
   margin: 0 auto;
+
+  color: $main-dark-bg;
+  text-decoration: none;
 
   &:hover,
   &:focus {

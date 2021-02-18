@@ -84,39 +84,39 @@
 
   &:hover,
   &:focus-within {
-    background-color: rgba(255, 255, 255, 0.2);
+    // background-color: rgba(255, 255, 255, 0.2);
   }
 
   &--production {
     // 1x: 370*620px
-    background-image: url("../img/production-desktop@1x.png");
+    background-image: url("../img/production-desktop@1x.jpg");
   }
 
   &--mounting {
     // 1x: 370*620px
-    background-image: url("../img/mounting-desktop@1x.png");
+    background-image: url("../img/mounting-desktop@1x.jpg");
   }
 
   &--accessories {
     // 1x: 370*620px
-    background-image: url("../img/accessories-desktop@1x.png");
+    background-image: url("../img/accessories-desktop@1x.jpg");
   }
 
   @media (min-resolution: $retina-dppx),
     (min-resolution: $retina-dpi) {
     &--production {
       // 2x: 740*1240px
-      background-image: url("../img/production-desktop@2x.png");
+      background-image: url("../img/production-desktop@2x.jpg");
     }
 
     &--mounting {
       // 2x: 740*1240px
-      background-image: url("../img/mounting-desktop@2x.png");
+      background-image: url("../img/mounting-desktop@2x.jpg");
     }
 
     &--accessories {
       // 2x: 740*1240px
-      background-image: url("../img/accessories-desktop@2x.png");
+      background-image: url("../img/accessories-desktop@2x.jpg");
     }
   }
 
@@ -129,17 +129,17 @@
 
     &--production {
       // 1x: 715*256px
-      background-image: url("../img/production-tablet@1x.png");
+      background-image: url("../img/production-tablet@1x.jpg");
     }
 
     &--mounting {
       // 1x: 715*256px
-      background-image: url("../img/mounting-tablet@1x.png");
+      background-image: url("../img/mounting-tablet@1x.jpg");
     }
 
     &--accessories {
       // 1x: 715*256px
-      background-image: url("../img/accessories-tablet@1x.png");
+      background-image: url("../img/accessories-tablet@1x.jpg");
       margin-bottom: 77px;
     }
   }
@@ -148,17 +148,17 @@
     (min-resolution: $retina-dpi) {
     &--production {
       // 2x: 1430*512px
-      background-image: url("../img/production-tablet@2x.png");
+      background-image: url("../img/production-tablet@2x.jpg");
     }
 
     &--mounting {
       // 2x: 1430*512px
-      background-image: url("../img/mounting-tablet@2x.png");
+      background-image: url("../img/mounting-tablet@2x.jpg");
     }
 
     &--accessories {
       // 2x: 1430*512px
-      background-image: url("../img/accessories-tablet@2x.png");
+      background-image: url("../img/accessories-tablet@2x.jpg");
     }
   }
 
@@ -171,17 +171,17 @@
 
     &--production {
       // 1x: 290*256px
-      background-image: url("../img/production-mobile@1x.png");
+      background-image: url("../img/production-mobile@1x.jpg");
     }
 
     &--mounting {
       // 1x: 290*256px
-      background-image: url("../img/mounting-mobile@1x.png");
+      background-image: url("../img/mounting-mobile@1x.jpg");
     }
 
     &--accessories {
       // 1x: 290*256px
-      background-image: url("../img/accessories-mobile@1x.png");
+      background-image: url("../img/accessories-mobile@1x.jpg");
     }
   }
 
@@ -189,17 +189,17 @@
     (min-resolution: $retina-dpi) {
     &--production {
       // 2x: 580*512px
-      background-image: url("../img/production-mobile@2x.png");
+      background-image: url("../img/production-mobile@2x.jpg");
     }
 
     &--mounting {
       // 2x: 580*512px
-      background-image: url("../img/mounting-mobile@2x.png");
+      background-image: url("../img/mounting-mobile@2x.jpg");
     }
 
     &--accessories {
       // 2x: 580*512px
-      background-image: url("../img/accessories-mobile@2x.png");
+      background-image: url("../img/accessories-mobile@2x.jpg");
     }
   }
 }
@@ -248,6 +248,13 @@
   text-decoration: none;
   color: $white;
 
+  background-color: rgba(27, 45, 55, 0.7);
+
+  &:hover,
+  &:focus {
+    background-color: rgba(27, 45, 55, 0.5);
+  }
+
   &::before {
     width: 63px;
     height: 63px;
@@ -274,5 +281,9 @@
     background-image: url("../img/arrow.svg");
     background-repeat: no-repeat;
     background-size: contain;
+  }
+
+  @media (max-width: $tablet-width) {
+    height: 256px;
   }
 }
