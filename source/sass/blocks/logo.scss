@@ -1,7 +1,6 @@
 .logo {
   display: flex;
   text-decoration: none;
-  cursor: pointer;
 }
 
 .logo img {
@@ -11,12 +10,6 @@
     width: 38px;
     height: 38px;
   }
-}
-
-.logo:hover img,
-.logo:focus img {
-  transform: scale(1.2);
-  transition: 0.4s;
 }
 
 .logo__text {

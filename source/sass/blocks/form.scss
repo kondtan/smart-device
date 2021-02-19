@@ -198,6 +198,11 @@
   background-size: contain;
 }
 
+.form__consent input:hover + label::before,
+.form__consent input:focus + label::before {
+  border-color: rgba(255, 255, 255, 0.3);
+}
+
 .form__button {
   width: 265px;
   min-height: 45px;

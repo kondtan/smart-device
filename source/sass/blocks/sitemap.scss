@@ -18,6 +18,8 @@
 }
 
 .sitemap h2 {
+  width: max-content;
+
   margin: 0;
   margin-bottom: 24px;
 
@@ -31,6 +33,8 @@
   color: $main-dark-bg;
 
   @media (max-width: $mobile-width) {
+    width: unset;
+
     margin-bottom: 0;
     padding: 29px 25px;
   }

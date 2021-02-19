@@ -74,7 +74,7 @@
     }
 
     popupForm.addEventListener('submit', function (evt) {
-      if (!userName.value || !userTel.value || !userText.value || !checkboxPopup.checked) {
+      if (!userName.value || !userTel.value || !checkboxPopup.checked) {
         evt.preventDefault();
       } else {
         if (isStorageSupport) {
