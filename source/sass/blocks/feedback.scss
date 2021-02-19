@@ -7,10 +7,14 @@
   line-height: 22px;
 
   background-color: $main-blue;
-  background-image: url("../img/paper-airplane.png"), url("../img/2-dotted-polygons.svg");
-  background-position: 350px 161px, 175px -60px;
+  background-image: url("../img/2-dotted-polygons.svg");
+  background-position: 175px -60px;
   background-repeat: no-repeat;
   overflow: hidden;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 
   &::before {
     position: absolute;
@@ -44,15 +48,22 @@
 }
 
 .feedback__wrapper {
-  width: 1276px;
+  min-width: 1024px;
+  max-width: 1200px;
+  width: 100%;
 
-  margin: 0 auto;
-  padding: 0 50px;
+  padding-right: 12px;
+  padding-left: 15px;
+  margin: 0;
+
+  display: flex;
+  align-items: flex-end;
+  flex-direction: column;
+
+  overflow: visible;
 
   box-sizing: border-box;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-end;
+  position: relative;
 
   @media (max-width: $tablet-width) {
     align-items: center;
@@ -61,16 +72,33 @@
 
   @media (max-width: $mobile-width) {
     width: auto;
+    min-width: unset;
+
     padding: 0 15px;
+    margin: 0 20px;
+  }
+}
+
+.feedback__wrapper img {
+  display: none;
+
+  @media (min-width: $desktop-width) {
+    width: 511px;
+    height: 288px;
+
+    position: absolute;
+    display: block;
+
+    top: 162px;
+    left: -10px;
   }
 }
 
 .feedback__container {
   width: 570px;
 
-  padding-left: 25px;
-  margin: 0 0 113px;
-  margin-top: 91px;
+  margin: 0 0 112px;
+  margin-top: 92px;
 
   position: relative;
   background-color: $main-blue;
@@ -80,11 +108,11 @@
     width: 591px;
 
     padding-left: 0;
-    margin: 0 0 104px 7px;
+    margin: 0 0 104px 0;
   }
 
   @media (max-width: $mobile-width) {
-    width: 100%;
+    width: auto;
     margin: 0 0 37px 0;
   }
 }
@@ -113,11 +141,11 @@
   }
 }
 
-.feedback__container p:first-of-type {
-  margin: 0 0 48px -3px;
+.feedback__text {
+  margin: 0 0 53px -3px;
 
   @media (max-width: $tablet-width) {
-    margin: 0 0 53px 0;
+    margin: 0 0 53px 2px;
   }
 
   @media (max-width: $mobile-width) {

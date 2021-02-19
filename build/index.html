@@ -187,10 +187,16 @@
     </section>
     <section class="page-main__feedback feedback" id="consult">
       <div class="feedback__wrapper">
+        <picture>
+          <!-- 511 × 288 -->
+          <!-- <source type="image/webp" media="(min-width: 1024px)" srcset="img/airplane.webp 1x, img/airplane@2x.webp 2x"> -->
+          <!-- 1022 × 576 -->
+          <img src="./img/paper-airplane.png" srcset="./img/airplane@2x.png 2x" alt="бумажный самолёт" width="511" height="288">
+        </picture>
         <div class="feedback__container">
           <h2 class="visually-hidden">Обратная связь</h2>
           <span>Остались вопросы? Задайте их нам!</span>
-          <p>Мы проконсультируем Вас бесплатно</p>
+          <p class="feedback__text">Мы проконсультируем Вас бесплатно</p>
           <form action="https://echo.htmlacademy.ru" method="POST" class="feedback__form form">
             <p class="form__field form__field--name form__name">
               <label for="feedback-name" class="visually-hidden">Имя</label>
