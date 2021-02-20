@@ -206,7 +206,7 @@
             </p>
             <p class="form__field form__field--phone form__phone">
               <label for="feedback-phone" class="visually-hidden">Номер телефона</label>
-              <input type="tel" id="feedback-phone" name="phone" placeholder="Телефон" autocomplete="tel"  minlength="10" required>
+              <input type="tel" id="feedback-phone" name="phone" placeholder="Телефон" autocomplete="tel" pattern="^\+\d{1}\s\(\d{3}\)\s\d{3}-\d{2}-\d{2}" data-mask="+{7} (000) 000-00-00" required>
             </p>
             <p class="form__field form__field--question form__textarea form__question">
               <label class="visually-hidden" for="feedback-text">Ваш вопрос</label>
@@ -328,7 +328,7 @@
         </p>
         <p class="form__field form__field--phone popup__field">
           <label class="visually-hidden" for="feedback-tel-popup">Телефон</label>
-          <input id="feedback-tel-popup" type="tel" name="user-tel" placeholder="Телефон" required>
+          <input id="feedback-tel-popup" type="tel" name="user-tel" placeholder="Телефон" autocomplete="tel" pattern="^\+\d{1}\s\(\d{3}\)\s\d{3}-\d{2}-\d{2}" data-mask="+{7} (000) 000-00-00" required>
         </p>
         <p class="form__field form__field--text popup__field popup__field--text">
           <label class="visually-hidden" for="feedback-text-popup">Ваш вопрос</label>
