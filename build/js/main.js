@@ -77,7 +77,8 @@
       isStorageSupport = false;
     }
 
-    openPopupButton.addEventListener('click', function () {
+    openPopupButton.addEventListener('click', function (evt) {
+      evt.preventDefault();
       popup.classList.remove('popup__hidden');
       overlay.classList.remove('overlay__hidden');
 
@@ -173,7 +174,7 @@
 
   var titleSitemap = document.querySelector('.sitemap h2');
   var sitemapButton = document.querySelector('.sitemap__button');
-  var sitemapList = document.querySelector('.sitemap ul');
+  var sitemapList = document.querySelector('.sitemap__list');
 
   var titleContact = document.querySelector('.contact h2');
   var buttonContact = document.querySelector('.contact__button');

@@ -27,7 +27,8 @@
       isStorageSupport = false;
     }
 
-    openPopupButton.addEventListener('click', function () {
+    openPopupButton.addEventListener('click', function (evt) {
+      evt.preventDefault();
       popup.classList.remove('popup__hidden');
       overlay.classList.remove('overlay__hidden');
 

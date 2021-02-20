@@ -1,7 +1,7 @@
 .sitemap {
   min-width: 495px;
   width: 500;
-  margin: 0 83px 0 0;
+  margin: 0 53px 0 0;
 
   @media (max-width: $tablet-width) {
     min-width: auto;
@@ -49,18 +49,19 @@
 }
 
 .sitemap__list {
-  max-height: 110px;
+  min-height: 110px;
+
   margin: 0;
   padding: 0;
   list-style: none;
 
   display: flex;
-  flex-direction: column;
   align-items: flex-start;
   flex-wrap: wrap;
 
   @media (max-width: $tablet-width) {
     max-height: none;
+    flex-direction: column;
   }
 
   @media (max-width: $mobile-width) {
@@ -71,6 +72,12 @@
   @media (max-width: $mobile-min-width) {
     margin: 0;
   }
+}
+
+.sitemap__sublist {
+  list-style: none;
+  padding: 0;
+  margin: 0 75px 0 0;
 }
 
 .sitemap__button {
@@ -85,6 +92,10 @@
   @media (max-width: $mobile-min-width) {
     right: 19px;
   }
+}
+
+.sitemap__item {
+  width: 100%;
 }
 
 .sitemap__item a {

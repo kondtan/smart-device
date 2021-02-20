@@ -114,8 +114,8 @@
 }
 
 .popup__consent input:checked + label::after {
-  left: -45px;
-  top: 7px;
+  left: -46px;
+  top: 5px;
 }
 
 .popup__close {
@@ -152,6 +152,7 @@
   }
 }
 
-.popup__hidden {
+.popup__hidden,
+.popup--no-js {
   display: none;
 }

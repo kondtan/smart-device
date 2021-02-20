@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -12,7 +12,7 @@
   <link href="css/style.min.css" rel="stylesheet">
   <title>Печатные платы и комплектующие</title>
 </head>
-<body class="page-body">
+<body>
 
   <svg style="display: none">
     <symbol id="letter" viewBox="0 0 19 14">
@@ -91,7 +91,7 @@
             <span>+7 (495) 000 52 52</span>
           </a>
         </div>
-        <a href="#" class="page-header__callback button">
+        <a href="form.html" class="page-header__callback button">
           Заказать звонок
         </a>
       </nav>
@@ -188,10 +188,8 @@
     <section class="page-main__feedback feedback" id="consult">
       <div class="feedback__wrapper">
         <picture>
-          <!-- 511 × 288 -->
-          <!-- <source type="image/webp" media="(min-width: 1024px)" srcset="img/airplane.webp 1x, img/airplane@2x.webp 2x"> -->
           <!-- 1022 × 576 -->
-          <img src="./img/paper-airplane.png" srcset="./img/airplane@2x.png 2x" alt="бумажный самолёт" width="511" height="288">
+          <img src="./img/paper-airplane@1x.png" srcset="./img/paper-airplane@2x.png 2x" alt="бумажный самолёт" width="511" height="288">
         </picture>
         <div class="feedback__container">
           <h2 class="visually-hidden">Обратная связь</h2>
@@ -204,7 +202,7 @@
             </p>
             <p class="form__field form__field--phone form__phone">
               <label for="feedback-phone" class="visually-hidden">Номер телефона</label>
-              <input type="tel" id="feedback-phone" name="phone" placeholder="Телефон">
+              <input type="tel" id="feedback-phone" name="phone" placeholder="Телефон" autocomplete="tel"  minlength="10" required>
             </p>
             <p class="form__field form__field--question form__textarea form__question">
               <label class="visually-hidden" for="feedback-text">Ваш вопрос</label>
@@ -259,35 +257,64 @@
                   </svg>
                 </a>
               </li>
+
+              <li class="social__item">
+                <a href="#" class="social__link social__link--fb">
+                  <span class="visually-hidden">Smart Device в Фейсбук</span>
+                  <svg class="social__icon social__icon--fb" width="27" height="27">
+                    <use xlink:href="#fb"></use>
+                  </svg>
+                </a>
+              </li>
+              <li class="social__item">
+                <a href="#" class="social__link social__link--ok">
+                  <span class="visually-hidden">Smart Device в Одноклассниках</span>
+                  <svg class="social__icon social__icon--ok" width="27" height="27">
+                    <use xlink:href="#ok"></use>
+                  </svg>
+                </a>
+              </li>
+              <li class="social__item">
+                <a href="#" class="social__link social__link--vk">
+                  <span class="visually-hidden">Smart Device в Вконтакте</span>
+                  <svg class="social__icon social__icon--vk" width="27" height="27">
+                    <use xlink:href="#vk"></use>
+                  </svg>
+                </a>
+              </li>
             </ul>
           </div>
         </div>
         <div class="page-footer__sitemap sitemap">
           <h2 tabindex="0">Разделы сайта</h2>
           <button type="button" class="sitemap__button toggle toggle--show" aria-label="Показать разделы сайта"></button>
-          <ul class="sitemap__list content content--show">
-            <li class="sitemap__item">
-              <a href="#">О компании</a>
-            </li>
-            <li class="sitemap__item">
-              <a href="#">Продукты</a>
-            </li>
-            <li class="sitemap__item">
-              <a href="#">Производство печатных плат</a>
-            </li>
-            <li class="sitemap__item">
-              <a href="#">Монтаж печатных плат</a>
-            </li>
-            <li class="sitemap__item">
-              <a href="#">Комплектующие</a>
-            </li>
-            <li class="sitemap__item">
-              <a href="#">Доставка</a>
-            </li>
-            <li class="sitemap__item">
-              <a href="#">Контакты</a>
-            </li>
-          </ul>
+          <div class="sitemap__list content content--show">
+            <ul class="sitemap__sublist">
+              <li class="sitemap__item">
+                <a href="#">О компании</a>
+              </li>
+              <li class="sitemap__item">
+                <a href="#">Продукты</a>
+              </li>
+              <li class="sitemap__item">
+                <a href="#">Производство печатных плат</a>
+              </li>
+              <li class="sitemap__item">
+                <a href="#">Монтаж печатных плат</a>
+              </li>
+            </ul>
+            <ul class="sitemap__sublist">
+              <li class="sitemap__item">
+                <a href="#">Комплектующие</a>
+              </li>
+              <li class="sitemap__item">
+                <a href="#">Доставка</a>
+              </li>
+              <li class="sitemap__item">
+                <a href="#">Контакты</a>
+              </li>
+            </ul>
+          </div>
         </div>
         <div class="page-footer__contact contact">
           <h2 tabindex="0">Наш офис</h2>
