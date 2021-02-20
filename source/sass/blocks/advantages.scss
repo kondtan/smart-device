@@ -91,10 +91,6 @@
   border: 1px solid $border-color;
   border-left: 3px solid $main-blue;
 
-  &--detective {
-    top: 43px;
-  }
-
   &:hover,
   &:focus {
     color: $white;
@@ -118,7 +114,18 @@
     margin-bottom: 22px;
 
     &--supplier {
+      padding-top: 34px;
       padding-right: 12px;
+      padding-bottom: 31px;
+      margin-bottom: 20px;
+    }
+
+    &--detective {
+      margin-bottom: 20px;
+    }
+
+    &--tag {
+      padding-bottom: 21px;
     }
 
     &:last-child {
@@ -138,6 +145,23 @@
   @media (max-width: $tablet-width) {
     top: 25px;
     left: 25px;
+  }
+
+  @media (max-width: $mobile-min-width) {
+    &--stopwatch {
+      top: 23px;
+      left: 26px;
+    }
+
+    &--hired {
+      top: 21px;
+      left: 23px;
+    }
+
+    &--detective {
+      width: 30px;
+      height: 26px;
+    }
   }
 }
 
@@ -178,4 +202,13 @@
   font-size: 16px;
   line-height: 22px;
   color: $font-color;
+}
+
+.advantages__item--detective h3 {
+  margin: 24px 0 15px 0;
+}
+
+.advantages__item--tag h3 {
+  margin-top: 29px;
+  margin-bottom: 15px;
 }

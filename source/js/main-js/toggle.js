@@ -11,6 +11,14 @@
   var contactBlock = document.querySelector('.contact__block');
 
   if (typeof (titleSitemap) !== 'undefined' && titleSitemap !== null) {
+    sitemapButton.classList.remove('toggle--no-js');
+    sitemapButton.classList.add('toggle--hidden');
+    buttonContact.classList.remove('toggle--no-js');
+    buttonContact.classList.add('toggle--hidden');
+
+    sitemapList.classList.add('content--hidden');
+    contactBlock.classList.add('content--hidden');
+
     titleSitemap.addEventListener('click', function () {
       if (sitemapButton.classList.contains('toggle--hidden')) {
         sitemapButton.classList.remove('toggle--hidden');

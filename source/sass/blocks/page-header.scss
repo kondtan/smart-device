@@ -159,3 +159,7 @@
 .page-header__call:focus-within svg {
   fill: $nav-hover;
 }
+
+.page-header__nav div {
+  max-width: 200px;
+}
