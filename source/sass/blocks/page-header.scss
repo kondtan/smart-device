@@ -36,11 +36,12 @@
 .page-header__nav {
   max-width: 800px;
   height: 52px;
+  margin-right: 2px;
 
   display: flex;
+  justify-content: space-between;
   flex-wrap: wrap;
   align-items: center;
-  margin-right: 2px;
 
   @media (max-width: $tablet-width) {
     min-width: 85px;
@@ -91,7 +92,7 @@
 }
 
 .page-header__call {
-  margin-left: 123px;
+  margin-left: 82px;
   position: relative;
 
   @media (max-width: $tablet-width) {
@@ -146,7 +147,7 @@
 
 .page-header__callback {
   max-width: 185px;
-  margin-left: 49px;
+  margin-left: 9px;
 
   @media (max-width: $tablet-width) {
     display: none;
@@ -162,4 +163,5 @@
 
 .page-header__nav div {
   max-width: 200px;
+  margin-right: 40px;
 }

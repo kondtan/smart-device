@@ -129,31 +129,6 @@
   }
 })();
 
-/*eslint-disable*/
-
-// 'use strict';
-
-// (function () {
-
-//   var maskedInputs = document.querySelectorAll('input[data-mask]');
-
-//   var setMask = function(input) {
-//     Array.prototype.forEach.call(maskedInputs, function(input) {
-//       var maskOptions = {
-//         mask: input.getAttribute('data-mask'),
-//         lazy: false
-//       };
-//       IMask(input, maskOptions);
-
-//       maskedInputs.addEventListener('focus', function () {
-//         maskedInputs.value = '+7(';
-//       });
-//     });
-//   }
-
-//   setMask();
-// }());
-
 'use strict';
 
 (function () {
