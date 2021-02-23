@@ -2,7 +2,6 @@
   max-width: 1170px;
   padding: 0 50px;
   position: relative;
-  overflow: hidden;
 
   &::before {
     width: 268px;
@@ -101,6 +100,14 @@
   @media (max-width: $tablet-width) {
     min-height: 233px;
     padding: 34px 20px 20px 24px;
+
+    &--detective {
+      padding-top: 39px;
+    }
+
+    &--tag {
+      padding-top: 36px;
+    }
   }
 
   @media (max-width: $mobile-width) {
@@ -145,6 +152,18 @@
   @media (max-width: $tablet-width) {
     top: 25px;
     left: 25px;
+
+    &--tag {
+      top: 23px;
+      left: 23px;
+    }
+
+    &--detective {
+      top: 26px;
+      left: 23px;
+      width: 34px;
+      height: 27px;
+    }
   }
 
   @media (max-width: $mobile-min-width) {
@@ -161,6 +180,12 @@
     &--detective {
       width: 30px;
       height: 26px;
+      top: 24px;
+      left: 25px;
+    }
+
+    &--tag {
+      left: 25px;
     }
   }
 }
@@ -211,4 +236,12 @@
 .advantages__item--tag h3 {
   margin-top: 29px;
   margin-bottom: 15px;
+
+  @media (max-width: $tablet-width) {
+    margin-bottom: 8px;
+  }
+
+  @media (max-width: $mobile-min-width) {
+    margin-bottom: 15px;
+  }
 }
