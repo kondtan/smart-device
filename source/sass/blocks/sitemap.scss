@@ -15,6 +15,11 @@
     position: relative;
     border-bottom: 1px solid $footer-border;
   }
+
+  @media (max-width: $mobile-min-width) {
+    padding: 0 15px;
+    padding-right: 0;
+  }
 }
 
 .sitemap h2 {
@@ -45,7 +50,7 @@
   }
 
   @media (max-width: $mobile-min-width) {
-    max-width: 286px;
+    max-width: 300px;
     padding: 29px 0;
     padding-bottom: 27px;
 

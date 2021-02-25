@@ -17,6 +17,12 @@
   }
 }
 
+input[type="text"],
+input[type="submit"],
+textarea {
+  -webkit-appearance: none;
+}
+
 .form__field input,
 .form__textarea textarea {
   box-sizing: border-box;

@@ -48,6 +48,12 @@
   margin: 0 0 33px 0;
 }
 
+input[type="text"],
+input[type="submit"],
+textarea {
+  -webkit-appearance: none;
+}
+
 .popup__field input,
 .popup__field textarea {
   width: 412px;

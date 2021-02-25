@@ -128,11 +128,6 @@
   @media (max-width: $mobile-width) {
     margin: 0;
   }
-
-  @media (max-width: $mobile-min-width) {
-    width: 100%;
-    padding: 0 15px;
-  }
 }
 
 .page-footer__contact {
