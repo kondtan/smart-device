@@ -7,16 +7,11 @@
     border: 0;
     display: block;
     background-color: transparent;
-  }
 
-  &::before {
-    position: absolute;
-    content: "";
-    width: 16px;
-    height: 1px;
-    left: 0;
-    top: 50%;
-    background-color: $button-show;
+    background-image: url("../img/icon-minus.svg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
   }
 }
 
@@ -29,6 +24,10 @@
     border: none;
     display: block;
     background-color: transparent;
+    background-image: url("../img/icon-plus.svg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
   }
 
   &::before {
