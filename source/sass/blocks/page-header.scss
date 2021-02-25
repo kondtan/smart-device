@@ -53,6 +53,7 @@
 
 .page-header__mail {
   position: relative;
+  margin-left: 50px;
 
   @media (max-width: $tablet-width) {
     width: 30px;
@@ -148,6 +149,7 @@
 .page-header__callback {
   max-width: 185px;
   margin-left: 9px;
+  // cursor: pointer;
 
   @media (max-width: $tablet-width) {
     display: none;
@@ -164,4 +166,8 @@
 .page-header__nav div {
   max-width: 200px;
   margin-right: 40px;
+
+  @media (max-width: $tablet-width) {
+    margin-right: 0;
+  }
 }

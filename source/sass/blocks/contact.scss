@@ -31,6 +31,11 @@
   letter-spacing: 0.05em;
   color: $main-dark-bg;
 
+  @media (max-width: $tablet-width) {
+    cursor: pointer;
+    z-index: 10;
+  }
+
   @media (max-width: $mobile-width) {
     width: unset;
 
@@ -45,6 +50,14 @@
     box-sizing: border-box;
   }
 }
+
+.contact h2:active,
+.contact h2:focus {
+  outline-style: auto;
+  outline-color: $main-dark-bg;
+  outline-width: 2px;
+}
+
 
 .contact__block {
   display: flex;

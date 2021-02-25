@@ -12,6 +12,7 @@
   border: 1px solid $white;
   border-radius: 5px;
   cursor: pointer;
+  z-index: 2;
 
   &:hover,
   &:focus {
