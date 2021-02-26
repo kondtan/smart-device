@@ -211,7 +211,7 @@
     sitemapList.classList.add('content--hidden');
     contactBlock.classList.add('content--hidden');
 
-    titleSitemap.addEventListener('click', function () {
+    var toggleSitemap = function () {
       if (sitemapButton.classList.contains('toggle--hidden')) {
         sitemapButton.classList.remove('toggle--hidden');
         sitemapButton.classList.add('toggle--show');
@@ -226,11 +226,11 @@
         sitemapButton.classList.remove('toggle--show');
         sitemapList.classList.toggle('content--hidden');
       }
-    });
+    };
   }
 
   if (typeof (titleContact) !== 'undefined' && titleContact !== null) {
-    titleContact.addEventListener('click', function () {
+    var toggleContact = function () {
       if (contactButton.classList.contains('toggle--hidden')) {
         contactButton.classList.remove('toggle--hidden');
         contactButton.classList.add('toggle--show');
@@ -245,6 +245,26 @@
         contactButton.classList.remove('toggle--show');
         contactBlock.classList.toggle('content--hidden');
       }
-    });
+    };
   }
+
+  titleSitemap.addEventListener('click', function () {
+    toggleSitemap();
+  });
+
+  titleSitemap.addEventListener('keydown', function (evt) {
+    if (evt.keyCode === 13) {
+      toggleSitemap();
+    }
+  });
+
+  titleContact.addEventListener('click', function () {
+    toggleContact();
+  });
+
+  titleContact.addEventListener('keydown', function (evt) {
+    if (evt.keyCode === 13) {
+      toggleContact();
+    }
+  });
 })();
